@@ -1,0 +1,39 @@
+﻿on right click on a entity:
+	cancel event
+	if name of entity is "ノズワール":
+		if player has  wooden sword named "&f&l初心者の剣" with lore "&fノズワールから貰った質素な木刀||&6&l<レアリティ>&e&l★" :
+			send "&a&lノズワール &8&l>> &f&l最近、魔物が強くなっている気がするな..." to player
+		else:
+			send "&a&lノズワール &8&l>> &f&l新米冒険者かい？" to player
+			wait 20 tick
+			send "&a&lノズワール &8&l>> &f&lそれならこれを貰って行きな！" to player
+			give wooden sword named "&f&l初心者の剣" with lore "&fノズワールから貰った質素な木刀||&6&l<レアリティ>&e&l★" to player
+
+on right click on a entity:
+	cancel event
+	if name of entity is "ユウヒ":
+		if {%player%.yuuhi} is true:
+			set {%player%.yuuhi} to false
+			send "&a&lユウヒ &8&l>> &f&lあら、冒険者さん" to player
+			wait 25 tick
+			send "&a&lユウヒ &8&l>> &f&l魔王退治を目標にしてるの？" to player
+			wait 25 tick
+			give 10 cookie named "&a&l栄養満点ビスケット" with lore "&f栄養満点で美味しいクッキー||&6&l<レアリティ>&e&l★" to player
+			send "&a&lユウヒ &8&l>> &f&lじゃあ、これあげるから頑張ってね" to player
+			wait 10 minutes
+			set {%player%.yuuhi} to true
+		else:
+			send "&a&lユウヒ &8&l>> &f&l魔王退治ファイト！" to player
+
+on right click on a entity:
+	cancel event
+	if name of entity is "プチべべモス":
+		send "&6&lプチべべモス &8&l>> &f&lブヒブヒ" to player
+		wait 25 tick
+		send "&6&lプチべべモス &8&l>> &f&l僕悪いべべモスじゃないよ！" to player
+		chance of 3%:
+			give 1 ghast tear named "&c&lプチべべモスの涙" with lore "&fプチべべモスが流した涙||&6&l<レアリティ>&e&l★" to player
+
+on join:
+	if {%player%.yuuhi} is not set:
+		set {%player%.yuuhi} to true

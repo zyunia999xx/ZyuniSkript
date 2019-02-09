@@ -1,0 +1,59 @@
+﻿on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv1":
+			add 1 to {%attacker%.tutorial2b}
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv2":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv3":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv4":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv5":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv6":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv7":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv8":
+			add 1 to {%attacker%.tutorial2b}
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv10":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv11":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv12":
+			add 1 to {%attacker%.tutorial2b}
+
+on death:
+	if {%attacker%.tutorial2a} is true:
+		if name of victim is "&f&lプチべべモス Lv13":
+			add 1 to {%attacker%.tutorial2b}
+
+

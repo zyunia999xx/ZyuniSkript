@@ -1,0 +1,121 @@
+﻿#鉄の剣
+#スニーク右クリで足払い
+
+on join:
+	player is in "skrpg"
+	set {%player%.R} to false
+	set {%player%.RL} to false
+	set {%player%.RR} to false
+	set {%player%.RRR} to false
+	set {%player%.RLL} to false
+	set {%player%.RLR} to false
+	set {%player%.RRL} to false
+
+	set {%player%.skill1cooldown} to true
+
+on teleport:
+	player is in "skrpg"
+	set {%player%.R} to false
+	set {%player%.RL} to false
+	set {%player%.RR} to false
+	set {%player%.RRR} to false
+	set {%player%.RLL} to false
+	set {%player%.RLR} to false
+	set {%player%.RRL} to false
+	set {%player%.skill1cooldown} to true
+#1
+#R
+on rightclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is false
+	{%player%.RR} is false
+	{%player%.RRR} is false
+	set action bar of player to "&lR"
+	play sound "BLOCK_STONE_BUTTON_CLICK_ON" to player with volume 0.2 and pitch 2
+	wait 5 tick
+	set {%player%.R} to true
+
+on rightclick holding sword:
+	player is in "skrpg"
+	
+
+#2
+#RR
+on rightclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RL} is false
+	{%player%.RR} is false
+	{%player%.RRR} is false
+	play sound "BLOCK_STONE_BUTTON_CLICK_ON" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - R"
+	wait 5 tick
+	set {%player%.RR} to true
+#RRR
+on rightclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RR} is true
+	play sound "BLOCK_STONE_BUTTON_CLICK_ON" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - R - R"
+	set {%player%.RRR} to true
+	send "&bマジックスキル発動！"
+	wait 5 tick
+	set {%player%.R} to false
+	set {%player%.RR} to false
+	set {%player%.RRR} to false
+
+
+
+#RRL
+
+on leftclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RR} is true
+	play sound "BLOCK_STONE_BUTTON_CLICK_OFF" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - R - L"
+	send "&aマジックスキル発動！"
+	set {%player%.RRL} to true
+	wait 5 tick
+	set {%player%.R} to false
+	set {%player%.RR} to false
+	set {%player%.RRL} to false
+
+
+
+#RL
+on leftclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RR} is false
+	{%player%.RRR} is false
+	play sound "BLOCK_STONE_BUTTON_CLICK_OFF" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - L"
+	wait 5 tick
+	set {%player%.RL} to true
+
+
+
+
+
+#RLR
+
+on rightclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RL} is true
+	play sound "BLOCK_STONE_BUTTON_CLICK_ON" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - L - R"
+	send "&6ソードスキル2発動！"
+	set {%player%.RLR} to true
+	wait 5 tick
+	set {%player%.R} to false
+	set {%player%.RL} to false
+	set {%player%.RLR} to false
+
+on damage:
+	victim is player
+	{skill1} is true
+	cancel event
+	

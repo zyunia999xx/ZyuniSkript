@@ -1,0 +1,31 @@
+﻿#RLL
+
+on leftclick holding sword:
+	player is in "skrpg"
+	{%player%.R} is true
+	{%player%.RL} is true
+	play sound "BLOCK_STONE_BUTTON_CLICK_OFF" to player with volume 0.2 and pitch 2
+	set action bar of player to "&lR - L - L"
+	if {%player%.skill1cooldown} is true:
+		send "&c&l回転斬り！"
+		send player title "&c&l回転&f&l斬&c&lり！" with subtitle "" for 1 seconds
+		set {%player%.skill1cooldown} to false
+		loop all entities in radius 4 of player:
+			set {skill1} to true
+			damage loop-entity by {%player's uuid%.skillpoint}
+			set {skill1} to false
+			play "entity_player_attack_sweep" to player at volume 10
+			show 30 Snow Shovel particles at location of player with color 40, 40, 40 offset by 1, 1, 1 with speed 1
+		wait 5 tick
+		set {%player%.R} to false
+		set {%player%.RL} to false
+		set {%player%.RLL} to false
+		wait 8 second
+		send "&6&lskRPG &8&l>> &f&lソードスキル1「回転斬り」のクールダウンが解消されました"
+		set {%player%.skill1cooldown} to true
+	else:
+		send "&6&lskRPG &8&l>> &4&lソードスキル1「回転斬り」はクールダウン中です"
+		wait 5 tick
+		set {%player%.R} to false
+		set {%player%.RL} to false
+		set {%player%.RLL} to false

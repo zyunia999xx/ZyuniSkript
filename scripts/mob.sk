@@ -1,0 +1,84 @@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#@@@@@これを書くときのルール的な何か@@@@@
+
+#          変数　{%attacker's uuid%.skRPG_exp_level} ＆ {%attacker's uuid%.skRPG_money_level} とは
+
+#          転生shopで購入できる「EXPの増幅」と「Goldの増幅」のことである
+
+#          これを使うときは必ず　「かける０.５」してほしい
+
+#          なぜかって？1つ購入すると数値が1上がるだろ？そのまま反映させたら違うから
+
+#          かける０.５をすることによって合わせているんだ
+
+#          ※Goldも同じ理由
+
+#@@@@@具体的な経験値とかごーるどとかの設定方法@@@@@
+
+#          経験値↓
+
+#          add 設定したい経験値量 + 0.5 * {%attacker's uuid%.skRPG_exp_level} to {%attacker's uuid%.skRPG_exp}
+
+#          Gold↓
+
+#         add 設定したいGold量 + 0.5 * {%attacker's uuid%.skRPG_money_level} to {%attacker's uuid%.skRPG_money}
+
+#＠＠＠＠＠＠＠＠＠＠＠追加の仕方＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+#         追加するときはわざわざ on death of zombie とかをコピーじゃなくても
+
+#        if name of victim is "":  からしたをコピーして使えばいいぞ
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#         これで説明は終わりさ
+
+#         ほろぐらむも同じようにやってくれたまえ
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+#@@@@@@@@@@@@@これは例だお@@@@@@@@@@@
+#@@@@@@@@@消さないように@@@@@@@@
+
+on death of zombie:
+	if name of victim is "a":
+		add 10000 + 0.5 * {%attacker's uuid%.skRPG_exp_level} to {%attacker's uuid%.skRPG_exp}
+		add 10000 + 0.5 * {%attacker's uuid%.skRPG_money_level} to {%attacker's uuid%.skRPG_money}
+		bind hologram "&f[ &b+%10000 + 0.5 * {%attacker's uuid%.skRPG_exp_level}%EXP &f]" to victim for 1.5 seconds offset by 0, 1.5, 0
+		bind hologram "&f[ &e+%10000 + 0.5 * {%attacker's uuid%.skRPG_money_level}%G &f]" to victim for 1.5 seconds offset by 0, 1.3, 0
+		
+#@@@@@@@@@消さないように@@@@@@@@
+#@@@@@@@@@@@@@これは例だお@@@@@@@@@@@
+
+on death of pig:
+	if name of victim is "&f&lプチべべモス":
+		play sound "ENTITY_FIREWORK_BLAST" to attacker with volume 1 and pitch 2
+		add 1 + 0.5 * {%attacker's uuid%.skRPG_exp_level} to {%attacker's uuid%.skRPG_exp}
+		add 1 + 0.5 * {%attacker's uuid%.skRPG_money_level} to {%attacker's uuid%.skRPG_money}
+		bind hologram "&f[ &b+%1 + 0.5 * {%attacker's uuid%.skRPG_exp_level}%EXP &f]" to victim for 1.5 seconds offset by 0, 1.5, 0
+		bind hologram "&f[ &e+%1 + 0.5 * {%attacker's uuid%.skRPG_money_level}%G &f]" to victim for 1.5 seconds offset by 0, 1.3, 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

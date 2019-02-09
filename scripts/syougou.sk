@@ -1,0 +1,217 @@
+﻿#初期
+on join:
+	if {%player's uuid%.skRPG_killmonster0} is not set:
+		set {%player's uuid%.skRPG_killmonster0} to false
+#インベントリ－クリック
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster0} is false:
+			cancel event
+			send "&6&lMenu &8&l>> &f&l称号をまだ獲得していません！"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster1} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster2} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster3} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster4} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 3 of player's current inventory to name tag named "&b&lサムライ" with lore "&f&l魔物を100匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster5} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 3 of player's current inventory to name tag named "&b&lサムライ" with lore "&f&l魔物を100匹討伐で獲得"
+				set slot 4 of player's current inventory to name tag named "&b&l剣豪" with lore "&f&l魔物を300匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster6} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 3 of player's current inventory to name tag named "&b&lサムライ" with lore "&f&l魔物を100匹討伐で獲得"
+				set slot 4 of player's current inventory to name tag named "&b&l剣豪" with lore "&f&l魔物を300匹討伐で獲得"
+				set slot 5 of player's current inventory to name tag named "&b&l鬼哭啾々" with lore "&f&l魔物を500匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster7} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 3 of player's current inventory to name tag named "&b&lサムライ" with lore "&f&l魔物を100匹討伐で獲得"
+				set slot 4 of player's current inventory to name tag named "&b&l剣豪" with lore "&f&l魔物を300匹討伐で獲得"
+				set slot 5 of player's current inventory to name tag named "&b&l鬼哭啾々" with lore "&f&l魔物を500匹討伐で獲得"
+				set slot 6 of player's current inventory to name tag named "&b&l剣神" with lore "&f&l魔物を1000匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l討伐数系称号":
+		if {%player's uuid%.skRPG_killmonster8} is true:
+			open chest with 2 row named "&b&l討伐数系称号" to player
+			loop 20 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to name tag named "&b&l見習い" with lore "&f&l魔物を10匹討伐で獲得"
+				set slot 1 of player's current inventory to name tag named "&b&l剣道部" with lore "&f&l魔物を20匹討伐で獲得"
+				set slot 2 of player's current inventory to name tag named "&b&l剣士" with lore "&f&l魔物を50匹討伐で獲得"
+				set slot 3 of player's current inventory to name tag named "&b&lサムライ" with lore "&f&l魔物を100匹討伐で獲得"
+				set slot 4 of player's current inventory to name tag named "&b&l剣豪" with lore "&f&l魔物を300匹討伐で獲得"
+				set slot 5 of player's current inventory to name tag named "&b&l鬼哭啾々" with lore "&f&l魔物を500匹討伐で獲得"
+				set slot 6 of player's current inventory to name tag named "&b&l剣神" with lore "&f&l魔物を1000匹討伐で獲得"
+				set slot 7 of player's current inventory to name tag named "&b&l剣聖" with lore "&f&l魔物を1500匹討伐で獲得"
+				set slot 17 of player's current inventory to name tag named "&8&l戻る"
+
+
+#称号獲得時 レベル部門
+on death:
+	victim is not player:
+		add 1 to {%attacker's uuid%.skRPG_killmonster}
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 10:
+			send attacker title "&e&l称号「見習い」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「見習い」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster1} to true
+			set {%attacker's uuid%.skRPG_killmonster0} to true
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 20:
+			send attacker title "&e&l称号「剣道部」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「剣道部」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster2} to true
+			set {%attacker's uuid%.skRPG_killmonster1} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 50:
+			send attacker title "&e&l称号「剣士」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「剣士」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster3} to true
+			set {%attacker's uuid%.skRPG_killmonster2} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 100:
+			send attacker title "&e&l称号「サムライ」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「サムライ」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster4} to true
+			set {%attacker's uuid%.skRPG_killmonster3} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 300:
+			send attacker title "&e&l称号「剣豪」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「剣豪」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster5} to true
+			set {%attacker's uuid%.skRPG_killmonster4} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 500:
+			send attacker title "&e&l称号「鬼哭啾々」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「鬼哭啾々」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster6} to true
+			set {%attacker's uuid%.skRPG_killmonster5} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 1000:
+			send attacker title "&e&l称号「剣神」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「剣神」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster7} to true
+			set {%attacker's uuid%.skRPG_killmonster6} to false
+on death:
+	victim is not player:
+		if {%attacker's uuid%.skRPG_killmonster} is 1500:
+			send attacker title "&e&l称号「剣聖」を獲得しました！" with subtitle "" for 3 seconds
+			send "&6&lMenu &8&l>>&e&l称号「剣聖」を獲得しました！" to attacker
+			play "ENTITY_PLAYER_LEVELUP" to attacker at volume 1
+			set {%attacker's uuid%.skRPG_killmonster8} to true
+			set {%attacker's uuid%.skRPG_killmonster7} to false
+
+
+
+#称号変更
+on inventory click:
+	name of clicked item is "&b&l見習い":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l見習い"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l見習い&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l剣道部":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l剣道部"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l剣道部&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l剣士":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l剣士"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l剣士&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&lサムライ":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&lサムライ"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&lサムライ&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l剣豪":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l剣豪"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l剣豪&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l鬼哭啾々":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l鬼哭啾々"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l鬼哭啾々&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l剣神":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l剣神"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l剣神&f&l>に変更しました"
+on inventory click:
+	name of clicked item is "&b&l剣聖":
+		cancel event
+		set {%player's uuid%.syougou} to "&b&l剣聖"
+		send "&6&lMenu &8&l>> &f&l称号を<&b&l剣聖&f&l>に変更しました"
+

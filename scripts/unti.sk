@@ -1,0 +1,42 @@
+on food level change:
+	cancel event
+
+
+on sprint toggle:
+	wait 1 tick
+	if player is sprinting:
+		loop 20 times:
+			set food level of player to food level of player - 0.5
+			loop 4 times:
+				wait 8 tick
+				if player is not sprinting:
+					stop loop
+				if food level of player is 3:
+					stop loop
+			wait 4 tick
+			if player is not sprinting:
+				stop loop
+			if food level of player is 3:
+				stop loop
+	else:
+		loop 20 times:
+			set food level of player to food level of player + 0.5
+			loop 4 times:
+				wait 4 tick
+				if player is sprinting:
+					stop loop
+				if food level of player is 10:
+					stop loop
+			wait 2 tick
+			if player is sprinting:
+				stop loop
+			if food level of player is 10:
+				stop loop
+command /tes:
+	trigger:
+		if block below player is mossy cobble stone:
+			if block 2 below player is mossy cobble stone:
+				send "ÇπÇ¢Ç±Ç§Ç∂Ç·Å["
+
+
+	

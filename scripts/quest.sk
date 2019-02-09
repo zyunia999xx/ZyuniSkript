@@ -1,0 +1,286 @@
+﻿on right click on a entity:
+	cancel event
+	if name of entity is "ヨゾラ":
+		if {%player%.questset} is false:
+			send "&6&lヨゾラ &8&l>> &f&lダイズ王国冒険者ギルドアズキ村支部です！  クエストの受け付けはこちらですよ～" to player
+			open chest with 4 row named "&c&lヨゾラ (クエスト受付)" to player
+			loop 40 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+				set slot 1 of player's current inventory to paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！"
+				set slot 2 of player's current inventory to paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう"
+				set slot 9 of player's current inventory to paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+		else:
+			send "&6&lヨゾラ &8&l>> &f&l1度に受けることのできるクエストは1つまでですよ～" to player
+
+
+#クエストをクリックしたときの処理
+on inventory click:
+	if inventory name of player's current inventory is "&c&lヨゾラ (クエスト受付)":
+		if clicked item is paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア":
+			open chest with 1 rows named "&6&l初心者の剣を受け取ろう！ &f&lを 受ける/戻る" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 3 of current inventory of player to gold block named "&6&lクエストを受ける"
+				set slot 5 of current inventory of player to emerald block named "&a&l戻る"
+
+#受付
+on inventory click:
+	if name of current inventory of player is "&6&l初心者の剣を受け取ろう！ &f&lを 受ける/戻る":
+		if clicked item is gold block named "&6&lクエストを受ける":
+			cancel event
+			if {%player%.tutorial1a} is false:
+				if {%player%.tutorial1} is false:
+					set {%player%.quest} to "&6&l初心者の剣を受け取ろう！"
+					set {%player%.questlore} to "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+					set {%player%.questset} to true
+					set {%player%.tutorial1} to true
+					set {%player%.tutorial1a} to true
+					send "&6&lヨゾラ &8&l>> &f&lクエスト 「&6&l初心者の剣を受け取ろう！&f&l」 を受注しました！" to player
+					send "&6&lヨゾラ &8&l>> &f&lメニュー -> skRPGSystem -> クエスト確認 からクエストの状況を確認できます！" to player
+					play sound "ENTITY_PLAYER_LEVELUP" to players with volume 1 and pitch 2
+					send player title "&6&lクエストを&f&l受注&6&lしました！" with subtitle "" for 3 seconds
+			else:
+				send "&6&lヨゾラ &8&l>> &f&lもうクリア済みですよ～" to player
+
+#戻る
+on inventory click:
+	if name of current inventory of player is "&6&l初心者の剣を受け取ろう！ &f&lを 受ける/戻る":
+		if clicked item is emerald block named "&a&l戻る":
+			cancel event
+			open chest with 4 row named "&c&lヨゾラ (クエスト受付)" to player
+			loop 40 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+				set slot 1 of player's current inventory to paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！"
+				set slot 2 of player's current inventory to paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう"
+				set slot 9 of player's current inventory to paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+
+#クエストクリア
+on right click:
+	if {%player%.tutorial1} is true:
+		if {%player%.tutorial1a} is true:
+			if player has  wooden sword named "&f&l初心者の剣" with lore "&fノズワールから貰った質素な木刀||&6&l<レアリティ>&e&l★" :
+				set {%player%.questset} to false
+				set {%player%.quest} to "無し"
+				set {%player%.questlore} to "現在受けているクエストはありません"
+				set {%player%.tutorial1} to false
+				broadcast "&6&lダイズ王国冒険者ギルド &f&l>> &f&l%player% さんが クエスト 「&6&l初心者の剣を受け取ろう！&f&l」をクリアしました！"
+				message "&6&lダイズ王国冒険者ギルド &f&l>> &f&l報酬として20エメを獲得しました！！"
+				send player title "&6&lクエストを&e&lクリア&6&lしました！" with subtitle "" for 3 seconds
+				add 20 to {%player's uuid%.CAO_money}
+				play sound "ENTITY_FIREWORK_BLAST" to players with volume 1 and pitch 2
+
+
+#2
+
+
+#クエストをクリックしたときの処理
+on inventory click:
+	if inventory name of player's current inventory is "&c&lヨゾラ (クエスト受付)":
+		if clicked item is paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！":
+			open chest with 1 rows named "&6&lプチべべモスを狩ろう！ &f&lを 受ける/戻る" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 3 of current inventory of player to gold block named "&6&lクエストを受ける"
+				set slot 5 of current inventory of player to emerald block named "&a&l戻る"
+
+#受付
+on inventory click:
+	if name of current inventory of player is "&6&lプチべべモスを狩ろう！ &f&lを 受ける/戻る":
+		if clicked item is gold block named "&6&lクエストを受ける":
+			cancel event
+			if {%player%.tutorial2a} is false:
+				if {%player%.tutorial2} is false:
+					set {%player%.quest} to "&6&lプチべべモスを狩ろう！"
+					set {%player%.questlore} to "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！||&f&l現在の討伐数<%{%player%.tutorial2b}%>"
+					set {%player%.questset} to true
+					set {%player%.tutorial2} to true
+					set {%player%.tutorial2a} to true
+					set {%player%.tutorial2b} to 0
+					send "&6&lヨゾラ &8&l>> &f&lクエスト 「&6&lプチべべモスを狩ろう！&f&l」 を受注しました！" to player
+					send "&6&lヨゾラ &8&l>> &f&lメニュー -> skRPGSystem -> クエスト確認 からクエストの状況を確認できます！" to player
+					play sound "ENTITY_PLAYER_LEVELUP" to players with volume 1 and pitch 2
+					send player title "&6&lクエストを&f&l受注&6&lしました！" with subtitle "" for 3 seconds
+			else:
+				send "&6&lヨゾラ &8&l>> &f&lもうクリア済みですよ～" to player
+
+#戻る
+on inventory click:
+	if name of current inventory of player is "&6&lプチべべモスを狩ろう！ &f&lを 受ける/戻る":
+		if clicked item is emerald block named "&a&l戻る":
+			cancel event
+			open chest with 4 row named "&c&lヨゾラ (クエスト受付)" to player
+			loop 40 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+				set slot 1 of player's current inventory to paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！"
+				set slot 2 of player's current inventory to paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう"
+				set slot 9 of player's current inventory to paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+
+#クエストクリア
+on death:
+	if {%attacker%.tutorial2} is true:
+		if {%attacker%.tutorial2a} is true:
+			if {%attacker%.tutorial2b} is 3:
+				set {%attacker%.questset} to false
+				set {%attacker%.quest} to "無し"
+				set {%attacker%.questlore} to "現在受けているクエストはありません"
+				set {%attacker%.tutorial2} to false
+				broadcast "&6&lダイズ王国冒険者ギルド &f&l>> &f&l%attacker% さんが クエスト 「&6&lプチべべモスを狩ろう！&f&l」をクリアしました！"
+				message "&6&lダイズ王国冒険者ギルド &f&l>> &f&l報酬として30エメを獲得しました！！" to attacker
+				send attacker title "&6&lクエストを&e&lクリア&6&lしました！" with subtitle "" for 3 seconds
+				add 30 to {%attacker's uuid%.CAO_money}
+				play sound "ENTITY_FIREWORK_BLAST" to players with volume 1 and pitch 2
+
+
+#3
+
+
+
+#クエストをクリックしたときの処理
+on inventory click:
+	if inventory name of player's current inventory is "&c&lヨゾラ (クエスト受付)":
+		if clicked item is paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう":
+			open chest with 1 rows named "&6&lメタルストーンの納品 &f&lを 受ける/戻る" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 3 of current inventory of player to gold block named "&6&lクエストを受ける"
+				set slot 5 of current inventory of player to emerald block named "&a&l戻る"
+
+#受付
+on inventory click:
+	if name of current inventory of player is "&6&lメタルストーンの納品 &f&lを 受ける/戻る":
+		if clicked item is gold block named "&6&lクエストを受ける":
+			cancel event
+			if {%player%.tutorial3a} is false:
+				if {%player%.tutorial3} is false:
+					set {%player%.quest} to "&6&lメタルストーンの納品"
+					set {%player%.questlore} to "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう"
+					set {%player%.questset} to true
+					set {%player%.tutorial3} to true
+					set {%player%.tutorial3a} to true
+					send "&6&lヨゾラ &8&l>> &f&lクエスト 「&6&lメタルストーンの納品！&f&l」 を受注しました！" to player
+					send "&6&lヨゾラ &8&l>> &f&lメニュー -> skRPGSystem -> クエスト確認 からクエストの状況を確認できます！" to player
+					play sound "ENTITY_PLAYER_LEVELUP" to players with volume 1 and pitch 2
+					send player title "&6&lクエストを&f&l受注&6&lしました！" with subtitle "" for 3 seconds
+			else:
+				send "&6&lヨゾラ &8&l>> &f&lもうクリア済みですよ～" to player
+
+#戻る
+on inventory click:
+	if name of current inventory of player is "&6&lメタルストーンの納品 &f&lを 受ける/戻る":
+		if clicked item is emerald block named "&a&l戻る":
+			cancel event
+			open chest with 4 row named "&c&lヨゾラ (クエスト受付)" to player
+			loop 40 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+				set slot 1 of player's current inventory to paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！"
+				set slot 2 of player's current inventory to paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘し、ヨゾラに話しかけよう"
+				set slot 9 of player's current inventory to paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+
+on right click on a entity:
+	cancel event
+	if name of entity is "ヨゾラ":
+		if {%player%.tutorial3} is true:
+			if {%player%.tutorial3a} is true:
+				player has 3 coal named "&c&lメタルストーン" with lore "&f金属を微かに含んだ石||&6&l<レアリティ>&e&l★":
+					set {%player%.questset} to false
+					set {%player%.quest} to "無し"
+					set {%player%.questlore} to "現在受けているクエストはありません"
+					set {%player%.tutorial3} to false
+					remove 3 coal named "&c&lメタルストーン" with lore "&f金属を微かに含んだ石||&6&l<レアリティ>&e&l★" from player
+					broadcast "&6&lダイズ王国冒険者ギルド &f&l>> &f&l%player% さんが クエスト 「&6&lメタルストーンの納品&f&l」をクリアしました！"
+					send player title "&6&lクエストを&e&lクリア&6&lしました！" with subtitle "" for 3 seconds
+					message "&6&lダイズ王国冒険者ギルド &f&l>> &f&l報酬として30エメを獲得しました！！" to player
+					add 30 to {%player's uuid%.CAO_money}
+					play sound "ENTITY_FIREWORK_BLAST" to players with volume 1 and pitch 2
+
+
+
+
+#4
+
+
+#クエストをクリックしたときの処理
+on inventory click:
+	if inventory name of player's current inventory is "&c&lヨゾラ (クエスト受付)":
+		if clicked item is paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！":
+			open chest with 1 rows named "&6&lドスべべモスの討伐 &f&lを 受ける/戻る" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 3 of current inventory of player to gold block named "&6&lクエストを受ける"
+				set slot 5 of current inventory of player to emerald block named "&a&l戻る"
+
+#受付
+on inventory click:
+	if name of current inventory of player is "&6&lドスべべモスの討伐 &f&lを 受ける/戻る":
+		if clicked item is gold block named "&6&lクエストを受ける":
+			cancel event
+			set {%player%.quest} to "&6&lドスべべモスの討伐"
+			set {%player%.questlore} to "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+			set {%player%.questset} to true
+			set {%player%.guildquest1} to true
+			set {%player%.guildquestb} to 0
+			send "&6&lヨゾラ &8&l>> &f&lクエスト 「&6&lドスべべモスの討伐&f&l」 を受注しました！" to player
+			send "&6&lヨゾラ &8&l>> &f&lメニュー -> skRPGSystem -> クエスト確認 からクエストの状況を確認できます！" to player
+			play sound "ENTITY_PLAYER_LEVELUP" to players with volume 1 and pitch 2
+			send player title "&6&lクエストを&f&l受注&6&lしました！" with subtitle "" for 3 seconds
+
+#戻る
+on inventory click:
+	if name of current inventory of player is "&6&lドスべべモスの討伐 &f&lを 受ける/戻る":
+		if clicked item is emerald block named "&a&l戻る":
+			cancel event
+			open chest with 4 row named "&c&lヨゾラ (クエスト受付)" to player
+			loop 40 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 0 of player's current inventory to paper named "&6&l初心者の剣を受け取ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&fアズキ村にいるさすらいの冒険者<ノズワール>に話しかけ、||&f初心者の剣を受け取ってみよう。||&f&l<&e&lクリア報酬&f&l>||&f&l20エメ||&c&lクリア方法||&f&l「初心者の剣」を持った状態で右クリックでクリア"
+				set slot 1 of player's current inventory to paper named "&6&lプチべべモスモスを狩ろう！" with lore "&f&l<&6&lチュートリアル&f&l>||&f「プチべべモス」3匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&lアズキ村周辺に生息する「プチべべモス」を倒そう！"
+				set slot 2 of player's current inventory to paper named "&6&lメタルストーンの納品" with lore "&f&l<&6&lチュートリアル&f&l>||&f「メタルストーン」3個の納品||&f&l<&e&lクリア報酬&f&l>||&f&l30エメ||&c&lクリア方法||&f&l採掘ピッケルで丸石を採掘してみよう"
+				set slot 9 of player's current inventory to paper named "&6&lドスべべモスの討伐" with lore "&f&l<&6&lギルドクエスト&f&l>||&f「ドスべべモス」1匹の討伐||&f&l<&e&lクリア報酬&f&l>||&f&l3ギルドコイン||&c&lクリア方法||&f&lビーングリーンに生息する「ドスべべモス」を倒そう！"
+
+#クエストクリア
+on death:
+	if {%attacker%.guildquest1} is true:
+		if {%attacker%.guildquest1b} is 1:
+			set {%attacker%.questset} to false
+			set {%attacker%.quest} to "無し"
+			set {%attacker%.questlore} to "現在受けているクエストはありません"
+			set {%attacker%.tutorial2} to false
+			broadcast "&6&lダイズ王国冒険者ギルド &f&l>> &f&l%attacker% さんが クエスト 「&6&lドスべべモスの討伐&f&l」をクリアしました！"
+			message "&6&lダイズ王国冒険者ギルド &f&l>> &f&l報酬として30エメを獲得しました！！" to attacker
+			send attacker title "&6&lクエストを&e&lクリア&6&lしました！" with subtitle "" for 3 seconds
+			add 3 to {%attacker's uuid%.guildcoin}
+			play sound "ENTITY_FIREWORK_BLAST" to players with volume 1 and pitch 2
+
+
+
+
+
+
+on join:
+	{%player%.questset} is not set:
+		set {%player%.questset} to false
+	{%player%.tutorial1} is not set:
+		set {%player%.tutorial1} to false
+	{%player%.tutorial1a} is not set:
+		set {%player%.tutorial1a} to false
+	{%player%.tutorial2} is not set:
+		set {%player%.tutorial2} to false
+	{%player%.tutorial2a} is not set:
+		set {%player%.tutorial2a} to false
+	{%player%.tutorial3} is not set:
+		set {%player%.tutorial3} to false
+	{%player%.tutorial3a} is not set:
+		set {%player%.tutorial3a} to false
+
+on chat:
+	set {%player%.questset} to false
+	set {%player%.tutorial1} to false
+	set {%player%.tutorial1a} to false
+
+
+
+

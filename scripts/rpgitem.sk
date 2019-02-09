@@ -1,0 +1,15 @@
+﻿on rightclick with a water_bottle:
+	name of held item contain "&a&lヒーリングポーション":
+		cancel event
+		apply regeneration 1 to the player
+		remove 1 water_bottle named "&a&lヒーリングポーション" with lore "&f体力を少量回復することができる薬||&6&l<レアリティ>&e&l★" from player
+
+on rightclick with cookie:
+	name of held item contain "&a&l栄養満点ビスケット":
+		cancel event
+		player's health is not 10
+		add 1 to the player's health
+		remove 1 cookie named "&a&l栄養満点ビスケット" with lore "&f栄養満点で美味しいクッキー||&6&l<レアリティ>&e&l★" from player
+
+
+

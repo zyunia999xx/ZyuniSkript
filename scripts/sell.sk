@@ -1,0 +1,405 @@
+options:
+	
+	#モブの的なアアアアアア
+	Name: 売却おじさん
+	
+	#メッセぇジィーーーーだぜエエェlエェっぇふ↑
+	sellMessage: &e売却おじさん &f> 合計%{%player%.total}%Goldです。
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	ItemType1: dye:12
+	ItemName1: &bブルーレット
+	ItemLore1: &f伝説のブルーレット
+	ItemMoney1: 3
+	
+	ItemType2: diamond
+	ItemName2: null
+	ItemLore2: null
+	ItemMoney2: 114514
+	
+	ItemType3: diamond
+	ItemName3: null
+	ItemLore3: null
+	ItemMoney3: 114514
+	
+	ItemType4: diamond
+	ItemName4: null
+	ItemLore4: null
+	ItemMoney4: 114514
+	
+	ItemType5: diamond
+	ItemName5: null
+	ItemLore5: null
+	ItemMoney5: 114514
+	
+	ItemType6: diamond
+	ItemName6: null
+	ItemLore6: null
+	ItemMoney6: 114514
+	
+	ItemType7: diamond
+	ItemName7: null
+	ItemLore7: null
+	ItemMoney7: 114514
+
+	ItemType8: diamond
+	ItemName8: null
+	ItemLore8: null
+	ItemMoney8: 114514
+	
+	ItemType9: diamond
+	ItemName9: null
+	ItemLore9: null
+	ItemMoney9: 114514
+	
+	ItemType10: diamond
+	ItemName10: null
+	ItemLore10: null
+	ItemMoney10: 114514
+	
+	ItemType11: diamond
+	ItemName11: null
+	ItemLore11: null
+	ItemMoney11: 114514
+	
+	ItemType12: diamond
+	ItemName12: null
+	ItemLore12: null
+	ItemMoney12: 114514
+	
+	ItemType13: diamond
+	ItemName13: null
+	ItemLore13: null
+	ItemMoney13: 114514
+	
+	ItemType14: diamond
+	ItemName14: null
+	ItemLore14: null
+	ItemMoney14: 114514
+	
+	ItemType15: diamond
+	ItemName15: null
+	ItemLore15: null
+	ItemMoney15: 114514
+	
+	ItemType16: diamond
+	ItemName16: null
+	ItemLore16: null
+	ItemMoney16: 114514
+	
+	ItemType17: diamond
+	ItemName17: null
+	ItemLore17: null
+	ItemMoney17: 114514
+	
+	ItemType18: diamond
+	ItemName18: null
+	ItemLore18: null
+	ItemMoney18: 114514
+	
+	ItemType19: diamond
+	ItemName19: null
+	ItemLore19: null
+	ItemMoney19: 114514
+	
+	ItemType20: diamond
+	ItemName20: null
+	ItemLore20: null
+	ItemMoney20: 114514
+	
+	ItemType21: diamond
+	ItemName21: null
+	ItemLore21: null
+	ItemMoney21: 114514
+	
+	ItemType22: diamond
+	ItemName22: null
+	ItemLore22: null
+	ItemMoney22: 114514
+	
+	ItemType23: diamond
+	ItemName23: null
+	ItemLore23: null
+	ItemMoney23: 114514
+	
+	ItemType24: diamond
+	ItemName24: null
+	ItemLore24: null
+	ItemMoney24: 114514
+	
+	ItemType25: diamond
+	ItemName25: null
+	ItemLore25: null
+	ItemMoney25: 114514
+	
+	ItemType26: diamond
+	ItemName26: null
+	ItemLore26: null
+	ItemMoney26: 114514
+	
+	ItemType27: diamond
+	ItemName27: null
+	ItemLore27: null
+	ItemMoney27: 114514
+	
+	ItemType28: diamond
+	ItemName28: null
+	ItemLore28: null
+	ItemMoney28: 114514
+	
+	ItemType29: diamond
+	ItemName29: null
+	ItemLore29: null
+	ItemMoney29: 114514
+	
+	ItemType30: diamond
+	ItemName30: null
+	ItemLore30: null
+	ItemMoney30: 114514
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+on right click on a entity:
+	cancel event
+	if {%player%.total} is not set:
+		set {%player%.total} to 0
+	if name of entity is "{@Name}":
+		open chest with 5 rows named "&e{@Name}" to player
+
+on inventory close:
+	inventory name of player's current inventory is "&e{@Name}"
+	loop all items in player's current inventory:
+		add loop-value to {_inv::*}
+	loop {_inv::*}:
+		
+		if loop-value is {@ItemType1} named "{@ItemName1}" with lore "{@ItemLore1}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney1} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+
+		if loop-value is {@ItemType2} named "{@ItemName2}" with lore "{@ItemLore2}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney2} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType3} named "{@ItemName3}" with lore "{@ItemLore3}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney3} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true		
+			
+		if loop-value is {@ItemType4} named "{@ItemName4}" with lore "{@ItemLore4}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney4} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType5} named "{@ItemName5}" with lore "{@ItemLore5}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney5} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true		
+			
+		if loop-value is {@ItemType6} named "{@ItemName6}" with lore "{@ItemLore6}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney6} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType7} named "{@ItemName7}" with lore "{@ItemLore7}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney7} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType8} named "{@ItemName8}" with lore "{@ItemLore8}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney8} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType9} named "{@ItemName9}" with lore "{@ItemLore9}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney9} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType10} named "{@ItemName10}" with lore "{@ItemLore10}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney10} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType11} named "{@ItemName11}" with lore "{@ItemLore11}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney11} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType12} named "{@ItemName12}" with lore "{@ItemLore12}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney12} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType13} named "{@ItemName13}" with lore "{@ItemLore13}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney13} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType14} named "{@ItemName14}" with lore "{@ItemLore14}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney14} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType15} named "{@ItemName15}" with lore "{@ItemLore15}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney15} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType16} named "{@ItemName16}" with lore "{@ItemLore16}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney16} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType17} named "{@ItemName17}" with lore "{@ItemLore17}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney17} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType18} named "{@ItemName18}" with lore "{@ItemLore18}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney18} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+
+		if loop-value is {@ItemType19} named "{@ItemName19}" with lore "{@ItemLore19}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney19} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType20} named "{@ItemName20}" with lore "{@ItemLore20}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney20} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType21} named "{@ItemName21}" with lore "{@ItemLore21}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney21} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType22} named "{@ItemName22}" with lore "{@ItemLore22}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney22} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType23} named "{@ItemName23}" with lore "{@ItemLore23}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney23} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType24} named "{@ItemName24}" with lore "{@ItemLore24}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney24} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType25} named "{@ItemName25}" with lore "{@ItemLore25}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney25} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType26} named "{@ItemName26}" with lore "{@ItemLore26}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney26} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType27} named "{@ItemName27}" with lore "{@ItemLore27}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney27} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType28} named "{@ItemName28}" with lore "{@ItemLore28}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney28} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType29} named "{@ItemName29}" with lore "{@ItemLore29}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney29} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true
+			
+		if loop-value is {@ItemType30} named "{@ItemName30}" with lore "{@ItemLore30}":
+			set {_amount} to loop-value.getAmount()
+			add {_amount} * {@ItemMoney30} to {%player%.total} and {%player's uuid%.skRPG_money}
+			subtract loop-value from {_inv::*}
+			set {_item} to true	
+			
+			
+			
+			
+			
+			
+			
+			
+	add {_inv::*} to player
+	if {_item} is set:
+		send "{@sellMessage}"
+		clear {%player%.total}
+		
+command /blue:
+	permission: blue
+	permission message: Unknown command. Type "/help" for help.
+	trigger:
+		give player 10 {@ItemType1} named "{@ItemName1}" with lore "{@ItemLore1}"
+		give player 10 {@ItemType2} named "{@ItemName2}" with lore "{@ItemLore2}"
+		give player 10 {@ItemType3} named "{@ItemName3}" with lore "{@ItemLore3}"
+		give player 10 {@ItemType4} named "{@ItemName4}" with lore "{@ItemLore4}"
+		give player 10 {@ItemType5} named "{@ItemName5}" with lore "{@ItemLore5}"
+		give player 10 {@ItemType6} named "{@ItemName6}" with lore "{@ItemLore6}"
+		give player 10 {@ItemType7} named "{@ItemName7}" with lore "{@ItemLore7}"
+		give player 10 {@ItemType8} named "{@ItemName8}" with lore "{@ItemLore8}"
+		give player 10 {@ItemType9} named "{@ItemName9}" with lore "{@ItemLore9}"
+		give player 10 {@ItemType10} named "{@ItemName10}" with lore "{@ItemLore10}"
+		give player 10 {@ItemType11} named "{@ItemName11}" with lore "{@ItemLore11}"
+		give player 10 {@ItemType12} named "{@ItemName12}" with lore "{@ItemLore12}"
+		give player 10 {@ItemType13} named "{@ItemName13}" with lore "{@ItemLore13}"
+		give player 10 {@ItemType14} named "{@ItemName14}" with lore "{@ItemLore14}"
+		give player 10 {@ItemType15} named "{@ItemName15}" with lore "{@ItemLore15}"
+		give player 10 {@ItemType16} named "{@ItemName16}" with lore "{@ItemLore16}"
+		give player 10 {@ItemType17} named "{@ItemName17}" with lore "{@ItemLore17}"
+		give player 10 {@ItemType18} named "{@ItemName18}" with lore "{@ItemLore18}"
+		give player 10 {@ItemType19} named "{@ItemName19}" with lore "{@ItemLore19}"
+		give player 10 {@ItemType20} named "{@ItemName20}" with lore "{@ItemLore20}"
+		give player 10 {@ItemType21} named "{@ItemName21}" with lore "{@ItemLore21}"
+		give player 10 {@ItemType22} named "{@ItemName22}" with lore "{@ItemLore22}"
+		give player 10 {@ItemType23} named "{@ItemName23}" with lore "{@ItemLore23}"
+		give player 10 {@ItemType24} named "{@ItemName24}" with lore "{@ItemLore24}"
+		give player 10 {@ItemType25} named "{@ItemName25}" with lore "{@ItemLore25}"
+		give player 10 {@ItemType26} named "{@ItemName26}" with lore "{@ItemLore26}"
+		give player 10 {@ItemType27} named "{@ItemName27}" with lore "{@ItemLore27}"
+		give player 10 {@ItemType28} named "{@ItemName28}" with lore "{@ItemLore28}"
+		give player 10 {@ItemType29} named "{@ItemName29}" with lore "{@ItemLore29}"
+		give player 10 {@ItemType30} named "{@ItemName30}" with lore "{@ItemLore30}"
+		

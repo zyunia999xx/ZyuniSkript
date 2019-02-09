@@ -1,0 +1,2 @@
+on damage:
+	set action bar of attacker to "&f<&8&l< &f&l%displayname of victim%&8&l >&f> &a&lHP&8&f:&a&l%max health of victim%&8&l/&a&l%health of victim% &4&l"

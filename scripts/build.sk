@@ -1,0 +1,20 @@
+﻿on build:
+	player do not have permission "sk.craft"
+	cancel event
+
+on break:
+	player do not have permission "sk.craft"
+	cancel event
+on explosion:
+	cancel event
+
+on join:
+	set the join message to "&6&lJOIN&6&l>&f>&6&l> &e&l%player%&fさんが､&6&lServer&fに&e参加&fしました。"
+
+on quit:
+	set the quit message to "&1&lLEFT>&1&l&f>&1&l> &8&l%player%&fさんが､&6&lServer&fから&8退出&fしました。"
+	teleport player to {0}
+
+
+on first join:
+	teleport player to {0}

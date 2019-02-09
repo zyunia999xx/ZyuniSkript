@@ -1,0 +1,941 @@
+every 1 seconds:
+	loop all players:
+		#アクションバーの変更をしろ
+		#ーーーーーーーーーーーーーーーここーーーーーーーーー
+		show an action bar from "&f&lLv&8&l.&f&l%{%loop-player's uuid%.skRPG_level}% &c&lHP &f&l%health of loop-player% &f&l/ &f&l%{%loop-player's uuid%.skRPG_hp}% &b&lEXP &f&l%{%loop-player's uuid%.skRPG_exp}% &f&l/ &f&l%{%loop-player's uuid%.skRPG_next_exp}%" to loop-player
+		#ーーーーーーーーーーーーーーーまでーーーーーーーーー
+
+on chat:
+	set {_prefix} to {player::prefix::%player's uuid%}
+	if {_prefix} is not set:
+		set {_prefix} to "%{%player's uuid%.syougou}%"
+	set the chat format to "&e&l✯%{%player's uuid%.skRPG_star}% &8&l| &7%{_prefix}% &8&l| &f&l%player%&8&l : &f&l%message%"
+	
+	
+	#ここのステータスコマンドはそのままにしたかったらそのままでいいけど
+	#もし変更したかったら
+	# if ぶんにはLv.100になったときだから注意決してEXPは間違ってないいいね？
+command /status:
+	trigger:
+		send "&e[✯%{%player's uuid%.skRPG_star}%] &f%player%のステータス [Lv.%{%player's uuid%.skRPG_level}%]"
+		send "&e所持Gold&7: &e%{%player's uuid%.skRPG_money}% "
+		if {%player's uuid%.skRPG_level} is 100:
+			send "&bEXP&7: &b2028 &7/ &b2028"
+		else:
+			send "&bEXP&7: &b%{%player's uuid%.skRPG_exp}% &7/ &b%{%player's uuid%.skRPG_next_exp}%"
+		send "体力: %{%player's uuid%.skRPG_hp}%"
+		send "攻撃力: %{%player's uuid%.skRPG_str}%"
+		send "運: %{%player's uuid%.skRPG_luck}%"
+		stop
+
+
+
+		
+		
+
+
+		
+		
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+#ここから先は変えなくておk
+
+command /reset:
+	permission: status_reset.admin
+	permission message: Unknow command. Type "/help" for help.
+	trigger:
+		set {%player's uuid%.skRPG_level} to 1
+		set {%player's uuid%.skRPG_exp} to 0
+		set {%player's uuid%.skRPG_next_exp} to 16
+		set {%player's uuid%.skRPG_hp} to 10
+		set {%player's uuid%.skRPG_str} to 1
+		set {%player's uuid%.skRPG_luck} to 0.1
+		set {%player's uuid%.skRPG_star} to 0
+		set {%player's uuid%.skRPG_level_max} to false
+		set {%player's uuid%.skRPG_hp_level} to 0
+		set {%player's uuid%.skRPG_str_level} to 0
+		set {%player's uuid%.skRPG_luck_level} to 0
+		set {%player's uuid%.skRPG_syn} to 0
+		set {%player's uuid%.skRPG_exp_level} to 0
+		set {%player's uuid%.skRPG_money_level} to 0
+		set max health of player to ({%player's uuid%.skRPG_hp})
+		player.setHealthScale(20.0)
+		send "リセット完了"
+on join:
+	while player is online:
+		set the player's tablist name to " &e&l✯%{%player's uuid%.skRPG_star}%&f&l | %{%player's uuid%.syougou}%&7 | &f&l%player% &b&lLv.&f&l%{%player's uuid%.skRPG_level}%"
+		wait 1 second
+
+
+
+on join:
+
+	if {%player's uuid%.skRPG_level} is not set:
+		set {%player's uuid%.skRPG_level} to 1
+	if {%player's uuid%.skRPG_exp} is not set:
+		set {%player's uuid%.skRPG_exp} to 0
+	if {%player's uuid%.skRPG_next_exp} is not set:
+		set {%player's uuid%.skRPG_next_exp} to 16
+	if {%player's uuid%.skRPG_hp} is not set:
+		set {%player's uuid%.skRPG_hp} to 10
+	if {%player's uuid%.skRPG_str} is not set:
+		set {%player's uuid%.skRPG_str} to 1
+	if {%player's uuid%.skRPG_luck} is not set:
+		set {%player's uuid%.skRPG_luck} to 0.1	
+	if {%player's uuid%.skRPG_star} is not set:
+		set {%player's uuid%.skRPG_star} to 0
+	if {%player's uuid%.skRPG_level_max} is not set:
+		set {%player's uuid%.skRPG_level_max} to false
+	if {%player's uuid%.skRPG_hp_level} is not set:
+		set {%player's uuid%.skRPG_hp_level} to 0
+	if {%player's uuid%.skRPG_str_level} is not set:
+		set {%player's uuid%.skRPG_str_level} to 0
+	if {%player's uuid%.skRPG_luck_level} is not set:
+		set {%player's uuid%.skRPG_luck_level} to 0
+	if {%player's uuid%.skRPG_syn} is not set:
+		set {%player's uuid%.skRPG_syn} to 0
+	if {%player's uuid%.skRPG_exp_level} is not set:
+		set {%player's uuid%.skRPG_exp_level} to 0
+	if {%player's uuid%.skRPG_money_level} is not set:
+		set {%player's uuid%.skRPG_money_level} to 0
+	if {%player's uuid%.skRPG_money} is not set:
+		set {%player's uuid%.skRPG_money} to 100
+	
+	set max health of player to ({%player's uuid%.skRPG_hp})
+	player.setHealthScale(20.0)
+on join:
+	if {%player's uuid%.syougou} is not set:
+		set {%player's uuid%.syougou} to "&6&lPlayer"
+
+
+#		set {%player's uuid%.skRPG_level} to 1 ある
+#		set {%player's uuid%.skRPG_exp} to 0 ある
+#		set {%player's uuid%.skRPG_next_exp} to 16 ある
+#		set {%player's uuid%.skRPG_hp} to 10 ある
+#		set {%player's uuid%.skRPG_str} to 1 ある
+#		set {%player's uuid%.skRPG_luck} to 0.1 ある
+#		set {%player's uuid%.skRPG_star} to 0 ある
+#		set {%player's uuid%.skRPG_level_max} to false ある
+#		set {%player's uuid%.skRPG_hp_level} to 0 書いた
+#		set {%player's uuid%.skRPG_str_level} to 0 書いた
+#		set {%player's uuid%.skRPG_luck_level} to 0 書いた
+#		set {%player's uuid%.skRPG_syn} to 0
+#		set {%player's uuid%.skRPG_exp_level} to 0
+#		set {%player's uuid%.skRPG_money_level} to 0
+
+
+
+
+
+
+
+
+on xp spawn:
+	cancel event
+
+
+
+
+
+command /coin:
+	permission: coin.admin
+	trigger:
+		give player 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+
+
+
+
+on right click on a entity:
+	cancel event
+	if name of entity is "転生おじさん":
+		open chest with 3 rows named "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転生 &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m " to player
+		set slot 11 of current inventory of player to magma cream named "&e転&b生&aす&dる"
+		set slot 15 of current inventory of player to gold nugget named "&e転&b生&aコ&dイ&dン&eS&bh&ao&dp"
+		stop
+
+on inventory click:
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転生 &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		cancel event
+		if clicked item is magma cream named "&e転&b生&aす&dる":
+			if {%player's uuid%.skRPG_level_max} is true:
+				if player has enough space for 3 gold nugget:
+					close player's inventory
+					set {%player's uuid%.skRPG_level} to 1
+					set {%player's uuid%.skRPG_exp} to 0
+					set {%player's uuid%.skRPG_next_exp} to 16
+					set {%player's uuid%.skRPG_hp} to 10
+					set {%player's uuid%.skRPG_str} to 1
+					set {%player's uuid%.skRPG_luck} to 0.1
+					add 1 to {%player's uuid%.skRPG_star}
+					set {%player's uuid%.skRPG_level_max} to false
+					set max health of player to ({%player's uuid%.skRPG_hp})
+					player.setHealthScale(20.0)
+					give player 3 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+					play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+					play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+					send player title "&e&l転生" with subtitle "&b&l&e[✯%{%player's uuid%.skRPG_star}%]" for 5 seconds
+					broadcast "&e[✯%{%player's uuid%.skRPG_star}%] &e%player%さんが転生しました"
+				else:
+					send "インベントリがいっぱいです！"
+					close player's inventory
+					stop
+			else:
+				send "Lv.100まで上げてから転生が行えます"
+				close player's inventory
+				stop
+				
+
+		if clicked item is gold nugget named "&e転&b生&aコ&dイ&dン&eS&bh&ao&dp":
+			open chest with 3 rows named "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m " to player
+			
+			set slot 10 of current inventory of player to golden apple named "&d生&5命&eの&b解&a放&d[&eL&bv&a.&d%{%player's uuid%.skRPG_hp_level}%&e]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d体&b力&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+			set slot 11 of current inventory of player to iron sword named "&a力&eの&b解&d放&e[&bL&av&d.&e%{%player's uuid%.skRPG_str_level}%&b]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d攻&e撃&b力&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+			set slot 12 of current inventory of player to iron axe named "&e幸&b運&aの&d解&e放&b[&aL&dv&e.&b%{%player's uuid%.skRPG_luck_level}%&a]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d運&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+			set slot 13 of current inventory of player to experience bottle named "&e総&b合&a解&d放&e[&bL&av&d.&e%{%player's uuid%.skRPG_syn}%&b]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d体&e力 &b攻&a撃&d力 &e運 &d+&e0&b.&a1&d増&b加||&e※&b生&a命&dの&e解&b放 &a力&dの&e解&b放 &a幸&d運&eの&b解&a放&dが||&e全&bて&aL&dv&e.&b1&aで&dあ&eる&b必&a要&dが&eあ&bり&aま&dす||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+			set slot 14 of current inventory of player to lapis lazuli named "&eE&bX&aP&dの&e増&b幅&a[&dL&ev&b.&a%{%player's uuid%.skRPG_exp_level}%&d]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eモ&bン&aス&dタ&eー&bを&a倒&dし&eた&bと&aき&dの&e獲&b得&aE&dX&eP&b+&a0&d.&e5||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+			set slot 15 of current inventory of player to gold ingot named "&eG&bo&al&dd&eの&b増&a幅&d[&eL&bv&a.&d%{%player's uuid%.skRPG_money_level}%&e]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eモ&bン&aス&dタ&eー&bを&a倒&dし&eた&bと&aき&dの&e獲&b得&aG&do&el&bd&a+&d0&e.&b5||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m"
+			
+				
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		cancel event
+
+#ーーーーー生命の解放ーーーーー
+		if clicked item is golden apple named "&d生&5命&eの&b解&a放&d[&eL&bv&a.&d%{%player's uuid%.skRPG_hp_level}%&e]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d体&b力&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&d生&5命&eの&b解&a放" to player
+			set slot 4 of current inventory of player to golden apple named "&d生&5命&eの&b解&a放" with lore "&b[Lv.%{%player's uuid%.skRPG_hp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_hp_level} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&d生&5命&eの&b解&a放":
+		cancel event
+		if clicked item is golden apple named "&d生&5命&eの&b解&a放" with lore "&b[Lv.%{%player's uuid%.skRPG_hp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_hp_level} + 1%]||&7クリックで解放":
+			if player has 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				remove 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+				send "&d生&5命&eの&b解&a放"
+				send "&b[Lv.%{%player's uuid%.skRPG_hp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_hp_level} + 1%]"
+				add 1 to {%player's uuid%.skRPG_hp_level}
+				play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+				play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+				close player's inventory
+				stop
+#ーーーーーーー力の解放ーーーーーーー
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		if clicked item is iron sword named "&a力&eの&b解&d放&e[&bL&av&d.&e%{%player's uuid%.skRPG_str_level}%&b]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d攻&e撃&b力&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&a力&eの&b解&d放" to player
+			set slot 4 of current inventory of player to iron sword named "&a力&eの&b解&d放" with lore "&b[Lv.%{%player's uuid%.skRPG_str_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_str_level} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&a力&eの&b解&d放":
+		cancel event
+		if clicked item is iron sword named "&a力&eの&b解&d放" with lore "&b[Lv.%{%player's uuid%.skRPG_str_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_str_level} + 1%]||&7クリックで解放":
+			if player has 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				remove 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+				send "&a力&eの&b解&d放"
+				send "&b[Lv.%{%player's uuid%.skRPG_str_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_str_level} + 1%]"
+				add 1 to {%player's uuid%.skRPG_str_level}
+				play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+				play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+				close player's inventory
+				stop	
+#ーーーーー幸運の解放ーーーーー
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		if clicked item is iron axe named "&e幸&b運&aの&d解&e放&b[&aL&dv&e.&b%{%player's uuid%.skRPG_luck_level}%&a]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d運&a+&d0&e.&b1&a増&d加||&e1&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&e幸&b運&aの&d解&e放" to player
+			set slot 4 of current inventory of player to iron axe named "&e幸&b運&aの&d解&e放" with lore "&b[Lv.%{%player's uuid%.skRPG_luck_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_luck_level} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&e幸&b運&aの&d解&e放":
+		cancel event
+		if clicked item is iron axe named "&e幸&b運&aの&d解&e放" with lore "&b[Lv.%{%player's uuid%.skRPG_luck_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_luck_level} + 1%]||&7クリックで解放":
+			if player has 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				remove 1 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+				send "&e幸&b運&aの&d解&e放"
+				send "&b[Lv.%{%player's uuid%.skRPG_luck_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_luck_level} + 1%]"
+				add 1 to {%player's uuid%.skRPG_luck_level}
+				play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+				play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+				close player's inventory
+				stop	
+#ーーーーー総合解放ーーーーー
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		if clicked item is experience bottle named "&e総&b合&a解&d放&e[&bL&av&d.&e%{%player's uuid%.skRPG_syn}%&b]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eL&be&av&de&el &bU&aP &dし&eた&b時&a、&d体&e力 &b攻&a撃&d力 &e運 &d+&e0&b.&a1&d増&b加||&e※&b生&a命&dの&e解&b放 &a力&dの&e解&b放 &a幸&d運&eの&b解&a放&dが||&e全&bて&aL&dv&e.&b1&aで&dあ&eる&b必&a要&dが&eあ&bり&aま&dす||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&e総&b合&a解&d放" to player
+			set slot 4 of current inventory of player to experience bottle named "&e総&b合&a解&d放" with lore "&b[Lv.%{%player's uuid%.skRPG_syn}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_syn} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&e総&b合&a解&d放":
+		cancel event
+		if clicked item is experience bottle named "&e総&b合&a解&d放" with lore "&b[Lv.%{%player's uuid%.skRPG_syn}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_syn} + 1%]||&7クリックで解放":
+			if player has 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				if {%player's uuid%.skRPG_hp_level} is more than 0:
+					if {%player's uuid%.skRPG_str_level} is more than 0:
+						if {%player's uuid%.skRPG_luck_level} is more than 0:
+							remove 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+							send "&e総&b合&a解&d放"
+							send "&b[Lv.%{%player's uuid%.skRPG_syn}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_syn} + 1%]"
+							add 1 to {%player's uuid%.skRPG_syn}
+							play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+							play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+							close player's inventory
+						else:
+							send "生命の解放 力の解放 幸運の解放が全てLv.1である必要があります"
+					else:
+						send "生命の解放 力の解放 幸運の解放が全てLv.1である必要があります"
+				else:
+					send "生命の解放 力の解放 幸運の解放が全てLv.1である必要があります"
+			else:
+				send "&e転生コインが足りません"
+#ーーーーーEXPの増幅ーーーーー
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		if clicked item is lapis lazuli named "&eE&bX&aP&dの&e増&b幅&a[&dL&ev&b.&a%{%player's uuid%.skRPG_exp_level}%&d]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eモ&bン&aス&dタ&eー&bを&a倒&dし&eた&bと&aき&dの&e獲&b得&aE&dX&eP&b+&a0&d.&e5||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&eE&bX&aP&dの&e増&b幅" to player
+			set slot 4 of current inventory of player to lapis lazuli named "&eE&bX&aP&dの&e増&b幅" with lore "&b[Lv.%{%player's uuid%.skRPG_exp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_exp_level} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&eE&bX&aP&dの&e増&b幅":
+		cancel event
+		if clicked item is lapis lazuli named "&eE&bX&aP&dの&e増&b幅" with lore "&b[Lv.%{%player's uuid%.skRPG_exp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_exp_level} + 1%]||&7クリックで解放":
+			if player has 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				remove 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+				send "&eE&bX&aP&dの&e増&b幅"
+				send "&b[Lv.%{%player's uuid%.skRPG_exp_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_exp_level} + 1%]"
+				add 1 to {%player's uuid%.skRPG_exp_level}
+				play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+				play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+				close player's inventory
+			else:
+				send "&e転生コインが足りません"
+#ーーーーーGold増幅ーーーーー
+	if inventory name of player's current inventory is "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m&f &e転&b生&as&dh&eo&bp &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m ":
+		if clicked item is gold ingot named "&eG&bo&al&dd&eの&b増&a幅&d[&eL&bv&a.&d%{%player's uuid%.skRPG_money_level}%&e]" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&eモ&bン&aス&dタ&eー&bを&a倒&dし&eた&bと&aき&dの&e獲&b得&aG&do&el&bd&a+&d0&e.&b5||&e2&bC&ao&di&en||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+			open chest with 1 rows named "&eG&bo&al&dd&eの&b増&a幅" to player
+			set slot 4 of current inventory of player to gold ingot named "&eG&bo&al&dd&eの&b増&a幅" with lore "&b[Lv.%{%player's uuid%.skRPG_money_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_money_level} + 1%]||&7クリックで解放"
+	if inventory name of player's current inventory is "&eG&bo&al&dd&eの&b増&a幅":
+		cancel event
+		if clicked item is gold ingot named "&eG&bo&al&dd&eの&b増&a幅" with lore "&b[Lv.%{%player's uuid%.skRPG_money_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_money_level} + 1%]||&7クリックで解放":
+			if player has 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m":
+				remove 2 gold nugget named "&e&l?&b&l?&a&l?&d&l転&e&l生&b&lコ&a&lイ&d&lン&e&l?&b&l?&a&l?" with lore "&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m||&e転&b生&aし&dた&e者&bが&a手&dに&eす&bる&a権&d利&eを&b有&aす&dる&eメ&bダ&aル||&e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m &e&m &b&m &a&m &d&m" from player
+				send "&eG&bo&al&dd&eの&b増&a幅"
+				send "&b[Lv.%{%player's uuid%.skRPG_money_level}%] &d&l→ &b[Lv.%{%player's uuid%.skRPG_money_level} + 1%]"
+				add 1 to {%player's uuid%.skRPG_money_level}
+				play "ENTITY_PLAYER_LEVELUP" to player at volume 5
+				play "ENTITY_FIREWORK_TWINKLE" to player at volume 5
+				close player's inventory
+			else:
+				send "&e転生コインが足りません"
+
+on unload:
+	broadcast "&f[&eskRPG&f] Systemのリロードを開始しました"
+	stop
+
+on load:
+	broadcast "&f[&eskRPG&f] Systemのリロード完了しました"
+	stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+on death:
+	if {%attacker's uuid%.skRPG_level} is less than 100:
+		if {%attacker's uuid%.skRPG_exp} is more than ({%attacker's uuid%.skRPG_next_exp} - 1):
+			add 1 to {%attacker's uuid%.skRPG_level}
+			if {%attacker's uuid%.skRPG_level_max} is false:
+				if {%attacker's uuid%.skRPG_level} is 100:
+					set {%attacker's uuid%.skRPG_level_max} to true				
+					send "&eLevel 100!" to attacker
+					send attacker title "&e&l Level up" with subtitle "&b&lLv.100" for 5 seconds
+					add (0.3 * {%attacker's uuid%.skRPG_level}) + (0.1 * {%attacker's uuid%.skRPG_hp_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_hp}
+					add (0.03 * {%attacker's uuid%.skRPG_level}) + (0.1 * {%attacker's uuid%.skRPG_str_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_str}
+					add 0.1 + (0.1 * {%attacker's uuid%.skRPG_luck_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_luck}
+					play "ENTITY_PLAYER_LEVELUP" to attacker at volume 5
+					play "ENTITY_FIREWORK_TWINKLE" to attacker at volume 5
+					set max health of attacker to ({%attacker's uuid%.skRPG_hp})
+					attacker.setHealthScale(20.0)
+					stop
+				else:
+					message "&b&lLevel %{%attacker's uuid%.skRPG_level} - 1% &d&l→ &b&lLevel %{%attacker's uuid%.skRPG_level}% " to attacker
+					send attacker title "&e&l Level up" with subtitle "&b&lLevel %{%attacker's uuid%.skRPG_level} - 1% &d&l→ &b&lLevel %{%attacker's uuid%.skRPG_level}%" for 5 seconds
+					play "ENTITY_PLAYER_LEVELUP" to attacker at volume 5
+					set {%attacker's uuid%.skRPG_next_exp} to {%attacker's uuid%.skRPG_level} * 52
+					set {%attacker's uuid%.skRPG_exp} to 0
+					add (0.3 * {%attacker's uuid%.skRPG_level}) + (0.1 * {%attacker's uuid%.skRPG_hp_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_hp}
+					add (0.03 * {%attacker's uuid%.skRPG_level}) + (0.1 * {%attacker's uuid%.skRPG_str_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_str}
+					add 0.1 + (0.1 * {%attacker's uuid%.skRPG_luck_level}) + (0.1 * {%attacker's uuid%.skRPG_syn}) to {%attacker's uuid%.skRPG_luck}
+					set max health of attacker to ({%attacker's uuid%.skRPG_hp})
+					attacker.setHealthScale(20.0)
+					send "&e[✯%{%attacker's uuid%.skRPG_star}%] &f%attacker%のステータス [Lv.%{%attacker's uuid%.skRPG_level}%]" to attacker
+					send "体力: %{%attacker's uuid%.skRPG_hp}%" to attacker
+					send "攻撃力: %{%attacker's uuid%.skRPG_str}%" to attacker
+					send "運: %{%attacker's uuid%.skRPG_luck}%" to attacker
+					send "次のレベルに必要なEXP量: %{%attacker's uuid%.skRPG_next_exp}%" to attacker
+					stop
+
+
+	
+
+
+
+

@@ -1,0 +1,581 @@
+options:
+#ーーーーーーーーーーーーーーーーーー
+
+#            このskの使い方
+
+#     まずサーバーに導入しよう
+
+#     /shop load を実行しよう
+
+#     オプションを変更しよう
+
+#     できたーわーい
+#ーーーーーーーーーーーーーーーーーー
+
+
+
+#     ここから設定スタート
+
+
+	#購入したときのメッセージ
+	buy: &6&l食料屋 &8&l>> &f&l購入ありがとうございます！
+	
+	#お金が足りなかったときのメッセージ
+	less: &6&l食料屋 &8&l>> &f&lあれれ？お金が足りませんよ！
+	
+	#村人の名前
+	name: 食料屋
+	
+	
+	#ここら辺からは使って慣れていってくれたまえ
+	#変数名から察しておくれ
+	
+	
+	shop_slot_1_set: true
+	shop_slot_1_item: bread
+	shop_slot_1_name: &6&lもちもちなパン
+	shop_slot_1_lore: &b&m=====&f 情報 &b&m=====||&f&l<ごパン>と呼ばれるもちっとしたパン||&b&m=====&6 値段 &b&m=====||&6$ 100G
+	shop_slot_1_money: 100
+	
+	shop_slot_2_set: true
+	shop_slot_2_item: cookie
+	shop_slot_2_name: &6&l栄養満点ビスケット
+	shop_slot_2_lore: &b&m=====&f 情報 &b&m=====||&f&lバニラミルクの美味しいビスケット||&b&m=====&6 値段 &b&m=====||&6$ 20G
+	shop_slot_2_money: 20
+	
+	shop_slot_3_set: false
+	shop_slot_3_item: diamond
+	shop_slot_3_name: 自由に変えてください
+	shop_slot_3_lore: 自由（ry
+	shop_slot_3_money: 114514
+	
+	shop_slot_4_set: false
+	shop_slot_4_item: diamond
+	shop_slot_4_name: 自由に変えてください
+	shop_slot_4_lore: 自由（ry
+	shop_slot_4_money: 114514
+	
+	shop_slot_5_set: false
+	shop_slot_5_item: diamond
+	shop_slot_5_name: 自由に変えてください
+	shop_slot_5_lore: 自由（ry
+	shop_slot_5_money: 114514
+		
+	shop_slot_6_set: false
+	shop_slot_6_item: diamond
+	shop_slot_6_name: 自由に変えてください
+	shop_slot_6_lore: 自由（ry
+	shop_slot_6_money: 114514
+		
+	shop_slot_7_set: false
+	shop_slot_7_item: diamond
+	shop_slot_7_name: 自由に変えてください
+	shop_slot_7_lore: 自由（ry
+	shop_slot_7_money: 114514
+		
+	shop_slot_8_set: false
+	shop_slot_8_item: diamond
+	shop_slot_8_name: 自由に変えてください
+	shop_slot_8_lore: 自由（ry
+	shop_slot_8_money: 114514
+		
+	shop_slot_9_set: false
+	shop_slot_9_item: diamond
+	shop_slot_9_name: 自由に変えてください
+	shop_slot_9_lore: 自由（ry
+	shop_slot_9_money: 114514
+		
+	shop_slot_10_set: false
+	shop_slot_10_item: diamond
+	shop_slot_10_name: 自由に変えてください
+	shop_slot_10_lore: 自由（ry
+	shop_slot_10_money: 114514
+	
+#ーーーーーーここから２ページ目だよーんーーーーーー
+
+	shop_slot_1_page_set: true
+	shop_slot_1_page_item: gold carrot
+	shop_slot_1_page_name: &6もちもち
+	shop_slot_1_page_lore: &b&m=====&f 情報 &b&m=====||&6?満腹度回復 しらね||&b&m=====&6 値段 &b&m=====||&6$ 1000
+	shop_slot_1_page_money: 1000
+	
+	shop_slot_2_page_set: false
+	shop_slot_2_page_item: diamond
+	shop_slot_2_page_name: 自由に変えてください
+	shop_slot_2_page_lore: 自由（ry
+	shop_slot_2_page_money: 114514
+	
+	shop_slot_3_page_set: false
+	shop_slot_3_page_item: diamond
+	shop_slot_3_page_name: 自由に変えてください
+	shop_slot_3_page_lore: 自由（ry
+	shop_slot_3_page_money: 114514
+
+	shop_slot_4_page_set: false
+	shop_slot_4_page_item: diamond
+	shop_slot_4_page_name: 自由に変えてください
+	shop_slot_4_page_lore: 自由（ry
+	shop_slot_4_page_money: 114514
+	
+	shop_slot_5_page_set: false
+	shop_slot_5_page_item: diamond
+	shop_slot_5_page_name: 自由に変えてください
+	shop_slot_5_page_lore: 自由（ry
+	shop_slot_5_page_money: 114514
+	
+	shop_slot_6_page_set: false
+	shop_slot_6_page_item: diamond
+	shop_slot_6_page_name: 自由に変えてください
+	shop_slot_6_page_lore: 自由（ry
+	shop_slot_6_page_money: 114514
+	
+	shop_slot_7_page_set: false
+	shop_slot_7_page_item: diamond
+	shop_slot_7_page_name: 自由に変えてください
+	shop_slot_7_page_lore: 自由（ry
+	shop_slot_7_page_money: 114514
+	
+	shop_slot_8_page_set: false
+	shop_slot_8_page_item: diamond
+	shop_slot_8_page_name: 自由に変えてください
+	shop_slot_8_page_lore: 自由（ry
+	shop_slot_8_page_money: 114514
+	
+	shop_slot_9_page_set: false
+	shop_slot_9_page_item: diamond
+	shop_slot_9_page_name: 自由に変えてください
+	shop_slot_9_page_lore: 自由（ry
+	shop_slot_9_page_money: 114514
+	
+	shop_slot_10_page_set: false
+	shop_slot_10_page_item: diamond
+	shop_slot_10_page_name: 自由に変えてください
+	shop_slot_10_page_lore: 自由（ry
+	shop_slot_10_page_money: 114514	
+
+
+
+#     設定はここまで
+
+
+#ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+on right click on a entity:
+	cancel event
+	if name of entity is "{@name}":
+		open chest with 4 rows named "&c食料屋&f（1 / 2）" to player
+		loop 36 times:
+			set slot loop-number -1 of player's current inventory to glass named " "
+		set slot 35 of current inventory of player to Arrow named "&b次のページ"
+		if {shop_slot_1_set} is {@shop_slot_1_set}:
+			set slot 11 of current inventory of player to {@shop_slot_1_item} named "{@shop_slot_1_name}" with lore "{@shop_slot_1_lore}"
+		if {shop_slot_2_set} is {@shop_slot_2_set}:
+			set slot 12 of current inventory of player to {@shop_slot_2_item} named "{@shop_slot_2_name}" with lore "{@shop_slot_2_lore}"
+		if {shop_slot_3_set} is {@shop_slot_3_set}:
+			set slot 13 of current inventory of player to {@shop_slot_3_item} named "{@shop_slot_3_name}" with lore "{@shop_slot_3_lore}"
+		if {shop_slot_4_set} is {@shop_slot_4_set}:
+			set slot 14 of current inventory of player to {@shop_slot_4_item} named "{@shop_slot_4_name}" with lore "{@shop_slot_4_lore}"
+		if {shop_slot_5_set} is {@shop_slot_5_set}:
+			set slot 15 of current inventory of player to {@shop_slot_5_item} named "{@shop_slot_5_name}" with lore "{@shop_slot_5_lore}"
+		if {shop_slot_6_set} is {@shop_slot_6_set}:
+			set slot 20 of current inventory of player to {@shop_slot_6_item} named "{@shop_slot_6_name}" with lore "{@shop_slot_6_lore}"
+		if {shop_slot_7_set} is {@shop_slot_7_set}:
+			set slot 21 of current inventory of player to {@shop_slot_7_item} named "{@shop_slot_7_name}" with lore "{@shop_slot_7_lore}"
+		if {shop_slot_8_set} is {@shop_slot_8_set}:
+			set slot 22 of current inventory of player to {@shop_slot_8_item} named "{@shop_slot_8_name}" with lore "{@shop_slot_8_lore}"
+		if {shop_slot_9_set} is {@shop_slot_9_set}:
+			set slot 23 of current inventory of player to {@shop_slot_9_item} named "{@shop_slot_9_name}" with lore "{@shop_slot_9_lore}"
+		if {shop_slot_10_set} is {@shop_slot_10_set}:
+			set slot 24 of current inventory of player to {@shop_slot_10_item} named "{@shop_slot_10_name}" with lore "{@shop_slot_10_lore}"
+		stop
+
+on inventory click:
+	if inventory name of player's current inventory is "&c食料屋&f（1 / 2）":
+		cancel event
+	if inventory name of player's current inventory is "&c食料屋&f（2 / 2）":
+		cancel event
+			
+
+			#             ２ページ目から１ページ目に戻るやつ
+	if inventory name of player's current inventory is "&c食料屋&f（2 / 2）":
+		if clicked item is arrow named "&b前のページに戻る":
+			cancel event
+			open chest with 4 rows named "&c食料屋&f（1 / 2）" to player
+			loop 36 times:
+				set slot loop-number -1 of player's current inventory to glass named " "
+			set slot 35 of current inventory of player to Arrow named "&b次のページ"
+			if {shop_slot_1_set} is {@shop_slot_1_set}:
+				set slot 11 of current inventory of player to {@shop_slot_1_item} named "{@shop_slot_1_name}" with lore "{@shop_slot_1_lore}"
+			if {shop_slot_2_set} is {@shop_slot_2_set}:
+				set slot 12 of current inventory of player to {@shop_slot_2_item} named "{@shop_slot_2_name}" with lore "{@shop_slot_2_lore}"
+			if {shop_slot_3_set} is {@shop_slot_3_set}:
+				set slot 13 of current inventory of player to {@shop_slot_3_item} named "{@shop_slot_3_name}" with lore "{@shop_slot_3_lore}"
+			if {shop_slot_4_set} is {@shop_slot_4_set}:
+				set slot 14 of current inventory of player to {@shop_slot_4_item} named "{@shop_slot_4_name}" with lore "{@shop_slot_4_lore}"
+			if {shop_slot_5_set} is {@shop_slot_5_set}:
+				set slot 15 of current inventory of player to {@shop_slot_5_item} named "{@shop_slot_5_name}" with lore "{@shop_slot_5_lore}"
+			if {shop_slot_6_set} is {@shop_slot_6_set}:
+				set slot 20 of current inventory of player to {@shop_slot_6_item} named "{@shop_slot_6_name}" with lore "{@shop_slot_6_lore}"
+			if {shop_slot_7_set} is {@shop_slot_7_set}:
+				set slot 21 of current inventory of player to {@shop_slot_7_item} named "{@shop_slot_7_name}" with lore "{@shop_slot_7_lore}"
+			if {shop_slot_8_set} is {@shop_slot_8_set}:
+				set slot 22 of current inventory of player to {@shop_slot_8_item} named "{@shop_slot_8_name}" with lore "{@shop_slot_8_lore}"
+			if {shop_slot_9_set} is {@shop_slot_9_set}:
+				set slot 23 of current inventory of player to {@shop_slot_9_item} named "{@shop_slot_9_name}" with lore "{@shop_slot_9_lore}"
+			if {shop_slot_10_set} is {@shop_slot_10_set}:
+				set slot 24 of current inventory of player to {@shop_slot_10_item} named "{@shop_slot_10_name}" with lore "{@shop_slot_10_lore}"
+			stop
+				
+	#                 １ぺーじ目から次のページに映る時のやつ
+	if inventory name of player's current inventory is "&c食料屋&f（1 / 2）":
+		if clicked item is arrow named "&b次のページ":
+			cancel event
+			open chest with 4 rows named "&c食料屋&f（2 / 2）" to player
+			loop 36 times:
+				set slot loop-number -1 of player's current inventory to glass named " "
+			set slot 27 of current inventory of player to Arrow named "&b前のページに戻る"
+			if {shop_slot_1_page_set} is {@shop_slot_1_page_set}:
+				set slot 11 of current inventory of player to {@shop_slot_1_page_item} named "{@shop_slot_1_page_name}" with lore "{@shop_slot_1_page_lore}"
+			if {shop_slot_2_page_set} is {@shop_slot_2_page_set}:
+				set slot 12 of current inventory of player to {@shop_slot_2_page_item} named "{@shop_slot_2_page_name}" with lore "{@shop_slot_2_page_lore}"
+			if {shop_slot_3_page_set} is {@shop_slot_3_page_set}:
+				set slot 13 of current inventory of player to {@shop_slot_3_page_item} named "{@shop_slot_3_page_name}" with lore "{@shop_slot_3_page_lore}"
+			if {shop_slot_4_page_set} is {@shop_slot_4_page_set}:
+				set slot 14 of current inventory of player to {@shop_slot_4_page_item} named "{@shop_slot_4_page_name}" with lore "{@shop_slot_4_page_lore}"
+			if {shop_slot_5_page_set} is {@shop_slot_5_page_set}:
+				set slot 15 of current inventory of player to {@shop_slot_5_page_item} named "{@shop_slot_5_page_name}" with lore "{@shop_slot_5_page_lore}"
+			if {shop_slot_6_page_set} is {@shop_slot_6_page_set}:
+				set slot 20 of current inventory of player to {@shop_slot_6_page_item} named "{@shop_slot_6_page_name}" with lore "{@shop_slot_6_page_lore}"
+			if {shop_slot_7_page_set} is {@shop_slot_7_page_set}:
+				set slot 21 of current inventory of player to {@shop_slot_7_page_item} named "{@shop_slot_7_page_name}" with lore "{@shop_slot_7_page_lore}"
+			if {shop_slot_8_page_set} is {@shop_slot_8_page_set}:
+				set slot 22 of current inventory of player to {@shop_slot_8_page_item} named "{@shop_slot_8_page_name}" with lore "{@shop_slot_8_page_lore}"
+			if {shop_slot_9_page_set} is {@shop_slot_9_page_set}:
+				set slot 23 of current inventory of player to {@shop_slot_9_page_item} named "{@shop_slot_9_page_name}" with lore "{@shop_slot_9_page_lore}"
+			if {shop_slot_10_page_set} is {@shop_slot_10_page_set}:
+				set slot 24 of current inventory of player to {@shop_slot_10_page_item} named "{@shop_slot_10_page_name}" with lore "{@shop_slot_10_page_lore}"
+			stop
+
+
+
+
+
+
+
+
+
+
+	if inventory name of player's current inventory is "&c食料屋&f（1 / 2）":
+		
+		if clicked item is {@shop_slot_1_item} named "{@shop_slot_1_name}" with lore "{@shop_slot_1_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_1_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_1_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_1_item} named "{@shop_slot_1_name}" with lore "{@shop_slot_1_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_2_item} named "{@shop_slot_2_name}" with lore "{@shop_slot_2_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_2_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_2_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_2_item} named "{@shop_slot_2_name}" with lore "{@shop_slot_2_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_3_item} named "{@shop_slot_3_name}" with lore "{@shop_slot_3_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_3_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_3_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_3_item} named "{@shop_slot_3_name}" with lore "{@shop_slot_3_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_4_item} named "{@shop_slot_4_name}" with lore "{@shop_slot_4_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_4_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_4_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_4_item} named "{@shop_slot_4_name}" with lore "{@shop_slot_4_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_5_item} named "{@shop_slot_5_name}" with lore "{@shop_slot_5_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_5_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_5_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_5_item} named "{@shop_slot_5_name}" with lore "{@shop_slot_5_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_6_item} named "{@shop_slot_6_name}" with lore "{@shop_slot_6_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_6_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_6_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_6_item} named "{@shop_slot_6_name}" with lore "{@shop_slot_6_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_7_item} named "{@shop_slot_7_name}" with lore "{@shop_slot_7_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_7_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_7_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_7_item} named "{@shop_slot_7_name}" with lore "{@shop_slot_7_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_8_item} named "{@shop_slot_8_name}" with lore "{@shop_slot_8_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_8_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_8_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_8_item} named "{@shop_slot_8_name}" with lore "{@shop_slot_8_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_9_item} named "{@shop_slot_9_name}" with lore "{@shop_slot_9_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_9_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_9_money} to {%player's uuid%.skRPG_money}
+				give player  {@shop_slot_9_item} named "{@shop_slot_9_name}" with lore "{@shop_slot_9_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_10_item} named "{@shop_slot_10_name}" with lore "{@shop_slot_10_lore}":
+			cancel event
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_10_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_10_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_10_item} named "{@shop_slot_10_name}" with lore "{@shop_slot_10_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+				
+				
+	if inventory name of player's current inventory is "&c食料屋&f（2 / 2）":
+		if clicked item is {@shop_slot_1_page_item} named "{@shop_slot_1_page_name}" with lore "{@shop_slot_1_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_1_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_1_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_1_page_item} named "{@shop_slot_1_page_name}" with lore "{@shop_slot_1_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+
+		if clicked item is {@shop_slot_2_page_item} named "{@shop_slot_2_page_name}" with lore "{@shop_slot_2_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_2_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_2_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_2_page_item} named "{@shop_slot_2_page_name}" with lore "{@shop_slot_2_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_3_page_item} named "{@shop_slot_3_page_name}" with lore "{@shop_slot_3_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_3_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_3_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_3_page_item} named "{@shop_slot_3_page_name}" with lore "{@shop_slot_3_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_4_page_item} named "{@shop_slot_4_page_name}" with lore "{@shop_slot_4_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_4_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_4_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_4_page_item} named "{@shop_slot_4_page_name}" with lore "{@shop_slot_4_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_5_page_item} named "{@shop_slot_5_page_name}" with lore "{@shop_slot_5_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_5_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_5_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_5_page_item} named "{@shop_slot_5_page_name}" with lore "{@shop_slot_5_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_6_page_item} named "{@shop_slot_6_page_name}" with lore "{@shop_slot_6_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_6_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_6_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_6_page_item} named "{@shop_slot_6_page_name}" with lore "{@shop_slot_6_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_7_page_item} named "{@shop_slot_7_page_name}" with lore "{@shop_slot_7_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_7_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_7_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_7_page_item} named "{@shop_slot_7_page_name}" with lore "{@shop_slot_7_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_8_page_item} named "{@shop_slot_8_page_name}" with lore "{@shop_slot_8_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_8_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_8_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_8_page_item} named "{@shop_slot_8_page_name}" with lore "{@shop_slot_8_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_9_page_item} named "{@shop_slot_9_page_name}" with lore "{@shop_slot_9_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_9_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_9_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_9_page_item} named "{@shop_slot_9_page_name}" with lore "{@shop_slot_9_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+				
+		if clicked item is {@shop_slot_10_page_item} named "{@shop_slot_10_page_name}" with lore "{@shop_slot_10_page_lore}":
+			if {%player's uuid%.skRPG_money} is more than {@shop_slot_10_page_money} - 1:
+				send "{@buy}"
+				add -{@shop_slot_10_page_money} to {%player's uuid%.skRPG_money}
+				give player 1 {@shop_slot_10_page_item} named "{@shop_slot_10_page_name}" with lore "{@shop_slot_10_page_lore}"
+				stop
+			else:
+				send "{@less}"
+				stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+command /shop load:
+	permission: shop_load.admin
+	trigger:
+		if {shop_load} is not set:
+			send "このコマンドは1度しか実行できません"
+			set {shop_load} to true
+			set {shop_slot_1_set} to true
+			set {shop_slot_2_set} to true
+			set {shop_slot_3_set} to true
+			set {shop_slot_4_set} to true
+			set {shop_slot_5_set} to true
+			set {shop_slot_6_set} to true
+			set {shop_slot_7_set} to true
+			set {shop_slot_8_set} to true
+			set {shop_slot_9_set} to true
+			set {shop_slot_10_set} to true
+		
+			set {shop_slot_1_page_set} to true
+			set {shop_slot_2_page_set} to true
+			set {shop_slot_3_page_set} to true
+			set {shop_slot_4_page_set} to true
+			set {shop_slot_5_page_set} to true
+			set {shop_slot_6_page_set} to true
+			set {shop_slot_7_page_set} to true
+			set {shop_slot_8_page_set} to true
+			set {shop_slot_9_page_set} to true
+			set {shop_slot_10_page_set} to true
+			stop
+		if {shop_load} is true:
+			send "もうこのコマンドは打つ必要がないです"
+			stop
+
+
+command /money [<text>] [<int>]:
+	permission: money.admin
+	permission message: Unknown command. Type "/help" for help.
+	trigger:
+		wait 1 tick
+		if arg 1 is not set:
+			send "/money < give | set | reset > <int>"
+			stop
+		if arg 1 is "give":
+			if arg 2 is set:
+				add arg 2 to {%player's uuid%.skRPG_money}
+				send "&f[&eMoney&f] &e現在の所持金%{%player's uuid%.skRPG_money}%"
+				stop
+			else:
+				send "/money < give | set | reset > <int>"
+				stop
+		if arg 1 is "set":
+			if arg 2 is set:
+				set {%player's uuid%.skRPG_money} to arg 2
+				send "&f[&eMoney&f] &e現在の所持金%{%player's uuid%.skRPG_money}%"
+				stop
+			else:
+				send "/money < give | set | reset > <int>"
+				stop
+		if arg 1 is "reset":
+			send "&f[&eMoney&f] &e現在の所持金を0ゴールドにしました"
+			stop
+		else:
+			send "/money < give | set | reset > <int>"
+			stop
+
+
+
+
+				

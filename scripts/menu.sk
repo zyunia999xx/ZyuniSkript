@@ -1,0 +1,265 @@
+﻿on join:
+    set slot 8 of player to book named "&6&lSk&e&lRPG &b&lSystem" with lore "&8&lskRPGSystem を 開きます"
+on first join:
+    set slot 8 of player to book named "&6&lSk&e&lRPG &b&lSystem" with lore "&8&lskRPGSystem を 開きます"
+
+on drop of book:
+	cancel event
+on offhand move:
+	name of held item contain "&6&lSk&e&lRPG &b&lSystem"
+	cancel event
+on inventory click:
+	if clicked item is stained glass pane named " ":
+		cancel event
+on inventory click:
+	if clicked item is book named "&6&lSk&e&lRPG &b&lSystem" with lore "&8&lskRPGSystem を 開きます":
+		cancel event
+	if clicked item is lava bucket named "&c&lゴミ箱" with lore "いらないアイテムはここへ":
+		cancel event
+		close player's inventory
+		open chest with 3 row named "&c&l&n取扱注意" to player
+
+on click:
+	name of held item contain "&6&lSk&e&lRPG &b&lSystem":
+		open chest with 1 row named "&6&lSk&e&lRPG &b&lSystem" to player
+		loop 10 times:
+			set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+			set slot 2 of current inventory of player to leather of efficiency named "&6&lskRPG &d&lバックパック" with lore "skRPG内で保存しておいたいアイテムはここへ"
+			set slot 4 of player's current inventory to player's skull named "&b&l%player%'s &a&lSystem" with lore "&f&lプレイヤーシステムを開きます"
+			set slot 6 of current inventory of player to lava bucket named "&c&lゴミ箱" with lore "いらないアイテムはここへ"
+			set slot 8 of player's current inventory to name tag named "&8&l閉じる"
+
+
+on inventory click:
+	name of clicked item is "&b&l%player%'s &a&lSystem":
+		open chest with 1 row named "&b&l%player%'s &a&lSystem" to player
+		loop 10 times:
+			set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+			set slot 2 of player's current inventory to name tag named "&c&l称号変更" with lore "&f&lTABとCHATに表示する称号を変更できます"
+			set slot 4 of player's current inventory to player's skull named "&b&l%player%'s &c&lStatus" with lore "&f&l様々なステータスが確認できます"
+			set slot 8 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&b&l%player%'s &c&lStatus":
+		open chest with 1 row named "&b&l%player%'s &c&lStatus" to player
+		loop 10 times:
+			set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+			set slot 0 of player's current inventory to gold ingot named "&6&l所持G" with lore "&e&l%{%player's uuid%.skRPG_money}%&6&lG"
+			set slot 1 of player's current inventory to beacon named "&b&lLevel" with lore "&b&lLv.&f&l%{%player's uuid%.skRPG_level}%"
+			set slot 8 of player's current inventory to name tag named "&8&l戻る"
+
+on inventory click:
+	name of clicked item is "&c&l称号変更":
+		open chest with 1 row named "&b&l%player%' さんが獲得した称号" to player
+		loop 10 times:
+			set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+			set slot 1 of player's current inventory to name tag named "&a&lレベル系称号"
+			set slot 3 of player's current inventory to name tag named "&b&l討伐数系称号"
+			set slot 8 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&a&lレベル系称号":
+		cancel event
+		send "&6&lMenu &8&l>> &f&l未実装です"
+on inventory click:
+	if inventory name of player's current inventory is "&b&l%player%'s &c&lStatus":
+		cancel event
+
+#戻るボタン
+on inventory click:
+	if inventory name of player's current inventory is "&b&l%player%'s &a&lSystem":
+		name of clicked item is "&8&l戻る":
+			open chest with 1 row named "&6&lSk&e&lRPG &b&lSystem" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 4 of player's current inventory to player's skull named "&b&l%player%'s &a&lSystem" with lore "&f&lプレイヤーシステムを開きます"
+				set slot 8 of player's current inventory to name tag named "&8&l閉じる"
+on inventory click:
+	if inventory name of player's current inventory is "&b&l%player%'s &c&lStatus":
+		name of clicked item is "&8&l戻る":
+			open chest with 1 row named "&b&l%player%'s &a&lSystem" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 2 of player's current inventory to name tag named "&c&l称号変更" with lore "&f&lTABとCHATに表示する称号を変更できます"
+				set slot 4 of player's current inventory to player's skull named "&b&l%player%'s &c&lStatus" with lore "&f&l様々なステータスが確認できます"
+				set slot 8 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	if inventory name of player's current inventory is "&b&l討伐数系称号":
+		name of clicked item is "&8&l戻る":
+			open chest with 1 row named "&b&l%player%' さんが獲得した称号" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 1 of player's current inventory to name tag named "&a&lレベル系称号"
+				set slot 3 of player's current inventory to name tag named "&b&l討伐数系称号"
+on inventory click:
+	if inventory name of player's current inventory is "&b&l%player%' さんが獲得した称号":
+		name of clicked item is "&8&l戻る":
+			open chest with 1 row named "&b&l%player%'s &a&lSystem" to player
+			loop 10 times:
+				set slot loop-number - 1 of player's current inventory to stained glass pane named " "
+				set slot 2 of player's current inventory to name tag named "&c&l称号変更" with lore "&f&lTABとCHATに表示する称号を変更できます"
+				set slot 4 of player's current inventory to player's skull named "&b&l%player%'s &c&lStatus" with lore "&f&l様々なステータスが確認できます"
+				set slot 8 of player's current inventory to name tag named "&8&l戻る"
+on inventory click:
+	name of clicked item is "&8&l閉じる":
+		close inventory of player
+
+on inventory click:
+    if name of current inventory of player is "&6&lSk&e&lRPG &b&lSystem":
+        if clicked item is leather of efficiency named "&6&lskRPG &d&lバックパック" with lore "skRPG内で保存しておいたいアイテムはここへ":
+            cancel event
+            close player's inventory
+            open chest with 1 row named "&6&lskRPG &b&lバックパックリスト" to player
+            set slot 1 of current inventory of player to leather named "&b&lLv.1 skRPG バックパック" with lore  "&r&n解放済み"
+            if {%player's uuid%.2strageLv.2} is true:
+                set slot 3 of current inventory of player to leather named "&b&lLv.2 skRPG パックパック" with lore "&r&n解放済み"
+            else:
+                set slot 3 of current inventory of player to leather named "&b&lLv.2 skRPG バックパック" with lore "&r&n未解放||&rLv.2 skRPG バックパックを使用することで||&r解放することができます"
+            if {%player's uuid%.2strageLv.3} is true:
+                set slot 5 of current inventory of player to leather named "&b&lLv.3 skRPG バックパック" with lore "&r&n解放済み"
+            else:
+                set slot 5 of current inventory of player to leather named "&b&lLv.3 skRPG バックパック" with lore "&r&n未解放||&rLv.3 skRPG バックパックを使用することで||&r解放することができます"
+            if {%player's uuid%.2strageLv.4} is true:
+                set slot 7 of current inventory of player to leather named "&b&lLv.4 skRPG バックパック" with lore "&r&n解放済み"
+            else:
+                set slot 7 of current inventory of player to leather named "&b&lLv.4 skRPG バックパック" with lore "&r&n未解放||&rLv.4 skRPG バックパックを使用することで||&r解放することができます"
+            stop
+    if name of current inventory of player is "&6&lSk&e&lRPG &b&lSystem":
+        cancel event
+        if clicked item isn't stained glass pane named " ":
+            cancel event
+    if name of current inventory of player is "&6&lskRPG &b&lバックパックリスト":
+        if clicked item is leather named "&b&lLv.1 skRPG バックパック" with lore "&r&n解放済み":
+            cancel event
+            close player's inventory
+            open virtual chest inventory with size 2 named "&b&lLv.1 skRPG バックパック" to player
+            set {_2slot} to 0
+            loop {2EnderChest%player%::*}:
+                set slot {_2slot} of player's current inventory to loop-value
+                add 1 to {_2slot}
+
+    if name of current inventory of player is "&6&lskRPG &b&lバックパックリスト":
+        if clicked item is leather named "&b&lLv.2 skRPG パックパック" with lore "&r&n解放済み":
+            cancel event
+            if {%player's uuid%.2strageLv.2} is true:
+                cancel event
+                close player's inventory
+                open virtual chest inventory with size 2 named "&b&lLv.2 skRPG バックパック" to player
+                set {_2slot2} to 0
+                loop {2EnderChest2%player%::*}:
+                    set slot {_2slot2} of player's current inventory to loop-value
+                    add 1 to {_2slot2}
+        if clicked item is leather named "&b&lLv.2 skRPG バックパック" with lore "&r&n未解放||&rLv.2 skRPG バックパックを使用することで||&r解放することができます":
+            send "&6[skRPG バックパック] &r&lまだ解放していません"
+            cancel event
+            close player's inventory
+                
+        if clicked item is leather named "&b&lLv.3 skRPG バックパック" with lore "&r&n解放済み":
+            cancel event
+            if {%player's uuid%.2strageLv.3} is true:
+                cancel event
+                close player's inventory
+                open virtual chest inventory with size 4 named "&b&lLv.3 skRPG バックパック" to player
+                set {_2slot3} to 0
+                loop {2EnderChest3%player%::*}:
+                    set slot {_2slot3} of player's current inventory to loop-value
+                    add 1 to {_2slot3}
+        if clicked item is leather named "&b&lLv.3 skRPG バックパック" with lore "&r&n未解放||&rLv.3 skRPG バックパックを使用することで||&r解放することができます":
+            send "&6[skRPG バックパック] &r&lまだ解放していません"
+            cancel event
+            close player's inventory
+                
+                
+        if clicked item is leather named "&b&lLv.4 skRPG バックパック" with lore "&r&n解放済み":
+            cancel event
+            if {%player's uuid%.2strageLv.4} is true:
+                cancel event
+                close player's inventory
+                open virtual chest inventory with size 5 named "&b&lLv.4 skRPG バックパック" to player
+                set {_2slot4} to 0
+                loop {2EnderChest4%player%::*}:
+                    set slot {_2slot4} of player's current inventory to loop-value
+                    add 1 to {_2slot4}
+        if clicked item is leather named "&b&lLv.4 skRPG バックパック" with lore "&r&n未解放||&rLv.4 skRPG バックパックを使用することで||&r解放することができます":
+            send "&6[skRPG バックパック] &r&lまだ解放していません"
+            cancel event
+            close player's inventory
+
+on inventory close:
+	inventory name of player's current inventory is "&b&lLv.1 skRPG バックパック"
+	clear {2EnderChest%player%::*}
+	set {_2slot} to 0
+	loop 18 times:
+		add slot {_2slot} of player's current inventory to {2EnderChest%player%::*}
+		add 1 to {_2slot}
+on inventory close:
+	inventory name of player's current inventory is "&b&lLv.2 skRPG バックパック"
+	clear {2EnderChest2%player%::*}
+	set {_2slot2} to 0
+	loop 27 times:
+		add slot {_2slot2} of player's current inventory to {2EnderChest2%player%::*}
+		add 1 to {_2slot2}
+on inventory close:
+	inventory name of player's current inventory is "&b&lLv.3 skRPG バックパック"
+	clear {2EnderChest3%player%::*}
+	set {_2slot3} to 0
+	loop 36 times:
+		add slot {_2slot3} of player's current inventory to {2EnderChest3%player%::*}
+		add 1 to {_2slot3}
+on inventory close:
+	inventory name of player's current inventory is "&b&lLv.4 skRPG バックパック"
+	clear {2EnderChest4%player%::*}
+	set {_2slot4} to 0
+	loop 45 times:
+		add slot {_2slot4} of player's current inventory to {2EnderChest4%player%::*}
+		add 1 to {_2slot4}
+
+on right click with leather:
+    name of held item contain "&6Lv.2 skRPG バックパック"
+    cancel event
+    if {%player's uuid%.2strageLv.2} is true:
+        send "&6[skRPG バックパック] &6これ以上使用しても意味がありません！"
+        stop
+    else:
+        name of held item contain "&6Lv.2 skRPG バックパック"
+        set {%player's uuid%.2strageLv.2} to true
+        remove 1 leather named "&6Lv.2 skRPG バックパック" with lore "&rLv.2 バックパックを解放できる||&2<レアリティ>&a★★★★" from player's inventory
+        send "&6[skRPG バックパック] &rLv.2 skRPG バックパック を解放しました！"
+        stop
+on right click with leather:
+    name of held item contain "&6Lv.3 skRPG バックパック"
+    cancel event
+    if {%player's uuid%.2strageLv.3} is true:
+        send "&6[skRPG バックパック] &6これ以上使用しても意味がありません！"
+        stop
+    else:
+        name of held item contain "&6Lv.3 skRPG バックパック"
+        set {%player's uuid%.2strageLv.3} to true
+        remove 1 leather named "&6Lv.3 skRPG バックパック" with lore "&rLv.3 skRPG バックパックを解放できる||&2<レアリティ>&a★★★★★" from player's inventory
+        send "&6[skRPG バックパック] &rLv.3 skRPG バックパック を解放しました！"
+        stop
+on right click with leather:
+    name of held item contain "&6Lv.4 skRPG バックパック"
+    cancel event
+    if {%player's uuid%.2strageLv.4} is true:
+        send "&6[skRPG バックパック] &6これ以上使用しても意味がありません！"
+        stop
+    else:
+        name of held item contain "&6Lv.4 skRPG バックパック"
+        set {%player's uuid%.2strageLv.4} to true
+        remove 1 leather named "&6Lv.4 skRPG バックパック" with lore "&rLv.4 skRPG バックパックを解放できる||&2<レアリティ>&a★★★★★" from player's inventory
+        send "&6[skRPG バックパック] &rLv.4 skRPG バックパック を解放しました！"
+
+command /skrpgstrage [<text>] [<offline player>]:
+    permission: strage_key.admin
+    trigger:
+        if arg 1 is not set:
+            send "&r/strage [key , delete , open1 , open2 ....] [Player Name]"
+        if arg 1 is "key":
+            give player 1 leather named "&6Lv.2 skRPG バックパック" with lore "&rLv.2 skRPG バックパックを解放できる||&2<レアリティ>&a★★★★"
+            give player 1 leather named "&6Lv.3 skRPG バックパック" with lore "&rLv.3 skRPG バックパックを解放できる||&2<レアリティ>&a★★★★★"
+            give player 1 leather named "&6Lv.4 skRPG バックパック" with lore "&rLv.4 skRPG バックパックを解放できる||&2<レアリティ>&a★★★★★"
+            send "&e&l[skRPG バックパック] &7&lバックパックを手に入れました。"
+        if arg 1 is "delete":
+            set {%player's uuid%.2strageLv.2} to false
+            set {%player's uuid%.2strageLv.3} to false
+            set {%player's uuid%.2strageLv.4} to false
+            send "&6[skRPG バックパック] &rバックパックを全て未解放にしました"

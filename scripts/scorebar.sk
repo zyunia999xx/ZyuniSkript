@@ -1,0 +1,72 @@
+﻿on join:
+	while player is online:
+		wait 3 ticks
+		wipe player's sidebar
+		set name of sidebar of player to "&6&l&nSk&e&l&nRPG"
+		set score "      " in sidebar of player to 12
+		set score "&f&l>> &e&lSTATUS &f&l<<" in sidebar of player to 11
+		set score "     " in sidebar of player to 10
+		set score "&b&lPlayer &8&l: &f&l%player%" in sidebar of player to 9
+		set score "&a&lLevel&8&l : &f&l%{%player's uuid%.skRPG_level}%" in sidebar of player to 8
+		set score "&e&l所持G&8&l : &f&l%{%player's uuid%.skRPG_money}%&f&lG " in sidebar of player to 7
+		set score "    " in sidebar of player to 6
+		set score "&f&l>> &a&lNEWS &f&l<<" in sidebar of player to 5
+		set score "   " in sidebar of player to 4
+		set score "&f&lskRPG βテスト &e&l公開！" in sidebar of player to 3
+		set score "  " in sidebar of player to 2
+		set score " " in sidebar of player to 1
+		wait 1 second
+
+
+
+
+
+options:
+#--------------------------------------------------------#
+
+
+
+
+
+#       ここを変更するだけで変更できる
+
+    #   ?注意事項?
+    
+    # えーと　『　:    』  の後には絶対空白一つ入れてね?
+    #じゃないとエラー出るぞ！
+    
+    
+    
+    
+	top: &e&n_______&a  &6&lSk&e&lRPG  &e&n_______
+	
+	
+	
+	
+	under: &f&l>> &8&lGAME_TIME&f&l <<%nl%&f&l%time%%nl%&f&l>>&8&lREAL_TIME&f&l <<%nl%&f&l%now%%nl%&e&n____________________________
+
+
+
+
+
+#--------------------------------------------------------#
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=------------------------------------ここから先は変える必要ないぞー------------------------------------=#
+on join:
+	while player is online:
+		wait 1 second
+		set tab header to "{@top}" and footer to "{@under}" for player
+		if {%player's uuid%.tab} is true:
+			set the player's tablist name to "%{%player's uuid%.tab_name}%"

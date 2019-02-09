@@ -1,0 +1,118 @@
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#           解説しよう
+
+#          武器の攻撃力やらなんやらを設定するときは
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#          if attacker's held item is stone sword:
+#               if name of attacker's held item contain "a":
+#               set {%attacker%.weapon} to 2
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#          これをつけたすだけだ！
+
+#          攻撃力変更方法は
+
+#          set {%attacker%.weapon} to 2      これを　→ set {%attacker%.weapon} to 114514
+
+#          こういう風にするだけだ（ちなみに114514ダメージ与える設定↑
+
+#          例文を用意してあるからそれみて設定してみてくれ
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+on damage:
+	
+#@@@@@@@@例文@@@@@@@
+
+	if attacker's held item is stone sword:
+		if name of attacker's held item contain "a":
+			set {%attacker%.weapon} to 2
+			
+#@@@@@@@@例文@@@@@@@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+#書き換えなくても大丈夫なところ
+
+on damage:
+	chance of {%attacker's uuid%.skRPG_luck}%:
+		play "ENTITY_ENDERDRAGON_FIREBALL_EXPLODE" to attacker at volume 5
+		set {_critical} to 1.5
+		stop
+	else:
+		set {_critical} to 1
+		stop
+on damage:
+	set {_1} to a random number between -1.5 and 1.5
+	set {_2} to a random number between 1 and 2
+	set {_3} to a random number between -1.5 and 1.5
+	set {_finaldamage} to ((damage * 2) * {_critical}) + {%attacker's uuid%.skRPG_str} + {%attacker%.weapon}
+	set damage to {_finaldamage} / 2
+	bind hologram "&c-%{_finaldamage}%" to victim for 3 seconds offset by {_1}, {_2}, {_3}
+	clear {%attacker%.weapon}
